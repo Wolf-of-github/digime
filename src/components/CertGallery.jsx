@@ -49,7 +49,8 @@ const CertGallery = () => {
 
   return (
     <div className="mt-16 flex flex-col items-center w-full">
-      <div className="flex text-2xl font-bold text-gray-100 font-mono">
+      
+      <div className="flex w-full text-2xl font-bold text-gray-100 font-mono">
         Certifications
       </div>
 
