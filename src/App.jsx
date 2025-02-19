@@ -1,8 +1,13 @@
-import React from 'react';
-import backgroundImage from './assets/background.jpg';
-import ProfileImage from './components/ProfileImage';
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
+import React from 'react'
+import backgroundImage from './assets/background.jpg'
+import ProfileImage from './components/ProfileImage'
+import Navbar from './components/Navbar'
+import Footer from './components/Footer'
+import Education from './components/Education'
+import Certs from './components/Certs'
+import WorkEx from './components/WorkEx'
+import la from './assets/la.jpeg'
+import CertGallery from './components/CertGallery'
 
 const App = () => {
   return (
@@ -14,12 +19,18 @@ const App = () => {
           
           <Navbar />
 
-          <div className="flex flex-col h-screen pt-10">
-            <div className="flex justify-center mt-16">
+          {/* About me */}
+          <div className="flex flex-col pt-10">
+            
+            <div className="flex justify-center mt-16 bg-cover">
               <ProfileImage />
             </div>
 
-            <div className="flex text-xl justify-center text-gray-100 font-mono my-16 text-center">
+            <div className="flex text-2xl font-bold text-gray-100 font-mono mt-16 text-justify">
+              About me
+            </div>
+
+            <div className="flex text-xl justify-center text-gray-100 font-mono mt-8 text-justify">
             I hail from a family of entrepreneurs and business professionals in Mumbai, India,
             ever since I was a kid, I have always been inquisitive about how things worked,
             and my curiosity always led me to dismantle gadgets and electronics to figure out their inner workings.
@@ -38,10 +49,19 @@ const App = () => {
             led me to my current conquest of pursuing a master's degree in Computer Science at 
             The University of Southern California. I'm grateful to have received this opportunity and I am 
             working towards making an impact in my community. In my free time, I deeply enjoy activities like 
-            meditation, playing chess, and hitting the gym. Please feel feel to browse through my 
+            meditation, playing chess, and working out at the gymcclburrel@usc.edu. Please feel feel to browse through my 
             qualifications and achievements below.
             </div>
+
           </div>
+
+          <Education/>
+
+          <Certs/>
+
+          <WorkEx/>
+
+          <CertGallery/>
 
           <Footer />
 

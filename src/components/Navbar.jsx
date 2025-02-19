@@ -3,7 +3,7 @@ import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 export default function Navbar() {
 
   return (
-    <nav className="fixed text-white mt-8 left-40 right-40">
+    <nav className=" text-white left-40 right-40 pt-8">
       <div className="flex justify-between items-center">
         <span href="#" className="text-3xl font-mono font-bold hover:cursor-pointer">Ishaan Apte</span>
 
