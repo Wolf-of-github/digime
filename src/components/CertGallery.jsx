@@ -1,12 +1,25 @@
 import React, { useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import cert1 from "../assets/cert1.png";
-import cert2 from "../assets/cert2.png";
-import cert3 from "../assets/cert3.jpg";
-import cert4 from "../assets/cert4.jpg";
+
+import aiforbusiness from "../assets/aiforbusiness.png";
+import blockchain from "../assets/blockchain.png";
+import sqlinjection from "../assets/sqlinjection.png";
+import credencecompletion from "../assets/credencecompletion.jpg";
+import glcloud from '../assets/glcloud.jpeg';
+import webdev from '../assets/webdev.jpg'
+import mernstack from '../assets/mernstack.jpg'
 
 const CertGallery = () => {
-  const certificates = [cert1, cert2, cert3, cert4];
+    
+    const certificates = [
+        aiforbusiness,
+        blockchain,
+        sqlinjection,
+        credencecompletion,
+        glcloud,
+        webdev,
+        mernstack
+      ];
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const nextSlide = () => {
