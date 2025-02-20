@@ -64,7 +64,7 @@ export default function Hackathons() {
               </div>
 
               <p className='underline text-gray-100 font-mono mt-4'>
-                <a href="https://drive.google.com/file/d/11Xe8m2UI6YMo5-16Y1qrlS1Z1Xhrg0IA/view">View Presentation</a>
+                <a href="https://drive.google.com/file/d/11Xe8m2UI6YMo5-16Y1qrlS1Z1Xhrg0IA/view" target='blank'>View Presentation</a>
               </p>
             </div>
           </div>
