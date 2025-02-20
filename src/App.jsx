@@ -8,6 +8,7 @@ import Certs from './components/Certs'
 import WorkEx from './components/WorkEx'
 import la from './assets/la.jpeg'
 import CertGallery from './components/CertGallery'
+import Hackathons from './components/Hackathons'
 
 const App = () => {
   return (
@@ -62,6 +63,8 @@ const App = () => {
           <WorkEx/>
 
           <CertGallery/>
+
+          <Hackathons/>
 
           <Footer />
 
