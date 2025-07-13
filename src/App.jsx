@@ -2,13 +2,6 @@ import React from 'react'
 import backgroundImage from './assets/background.jpg'
 import ProfileImage from './components/ProfileImage'
 import Navbar from './components/Navbar'
-import Footer from './components/Footer'
-import Education from './components/Education'
-import Certs from './components/Certs'
-import WorkEx from './components/WorkEx'
-import la from './assets/la.jpeg'
-import CertGallery from './components/CertGallery'
-import Hackathons from './components/Hackathons'
 
 const App = () => {
   return (
@@ -16,61 +9,69 @@ const App = () => {
       className="min-h-screen bg-cover"
       style={{ backgroundImage: `url(${backgroundImage})` }}
     >
-        <div className="mx-40">
-          
-          <Navbar />
-
-          {/* About me */}
-          <div className="flex flex-col pt-10">
-            
-            <div className="flex justify-center mt-16 bg-cover">
-              <ProfileImage />
-            </div>
-
-            <div className="flex text-2xl font-bold text-gray-100 font-mono mt-16 text-justify">
-              About me
-            </div>
-
-            <div className="flex text-xl justify-center text-gray-100 font-mono mt-8 text-justify">
-            I hail from a family of entrepreneurs and business professionals in Mumbai, India,
-            ever since I was a kid, I have always been inquisitive about how things worked,
-            and my curiosity always led me to dismantle gadgets and electronics to figure out their inner workings.
-            I believe that it is this inquisitiveness that prompted me to take up a career in the field of Science, 
-            during my initial years learning science at Ruparel College I was extremely intrigued by the world of 
-            transistors and capacitors, I spent inordinate amounts of time wiring and re-wiring circuit boards and 
-            PCBs to make cool electronic gadgets. However my passion for electronics transformed into a passion 
-            for software the day I learned that I could develop a cool and useful online gadget that any number of 
-            people can use that too using just a few lines of code! This led me to pursue a bachelor's degree in 
-            Computer Engineering at Mumbai University. During my bachelor's I primarily built software 
-            applications for small-scale enterprises and institutions. Python and Java were my go-to language. 
-            Having developed a strong foundation in DSA and Software Development (SDE) 
-            I assumed that would define my career, but the arrival of Artificial Intelligence and 
-            Large Language Models as powerful as the GPT, available to anyone who has an internet connection, 
-            completely blew my mind, and my focused completely turned towards learning more about AI, this has 
-            led me to my current conquest of pursuing a master's degree in Computer Science at 
-            The University of Southern California. I'm grateful to have received this opportunity and I am 
-            working towards making an impact in my community. In my free time, I deeply enjoy activities like 
-            meditation, playing chess, and working out at the gymcclburrel@usc.edu. Please feel feel to browse through my 
-            qualifications and achievements below.
-            </div>
-
+      <Navbar />
+      <div className="px-4 sm:px-8 md:px-16 lg:px-40">
+        {/* About Me */}
+        <div id="about" className="flex flex-col pt-10">
+          <div className="flex justify-center mt-16 bg-cover">
+            <ProfileImage />
           </div>
 
-          <Education/>
+          <div className="text-3xl font-bold text-gray-100 font-mono mt-16 text-center">
+            About Me
+          </div>
 
-          <Certs/>
-
-          <WorkEx/>
-
-          <CertGallery/>
-
-          <Hackathons/>
-
-          <Footer />
-
+          <div className="text-lg sm:text-xl text-gray-100 font-mono mt-8 text-justify leading-relaxed">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+          </div>
         </div>
-    </div>
-  );
-};
 
-export default App;
+        {/* Projects */}
+        <section id="projects" className="mt-20">
+          <div className="text-3xl font-bold text-gray-100 font-mono text-center">
+            Projects
+          </div>
+          <div className="mt-8 text-gray-100 font-mono text-center">
+            {/* Project cards or content will go here */}
+            Coming soon...
+          </div>
+        </section>
+
+        {/* Skills */}
+        <section id="skills" className="mt-20">
+          <div className="text-3xl font-bold text-gray-100 font-mono text-center">
+            Skills
+          </div>
+          <div className="mt-8 text-gray-100 font-mono text-center">
+            {/* Skills list will go here */}
+            Coming soon...
+          </div>
+        </section>
+
+        {/* Education */}
+        <section id="education" className="mt-20">
+          <div className="text-3xl font-bold text-gray-100 font-mono text-center">
+            Education
+          </div>
+          <div className="mt-8 text-gray-100 font-mono text-center">
+            {/* Education content will go here */}
+            Coming soon...
+          </div>
+        </section>
+
+        {/* Certifications */}
+        <section id="certifications" className="mt-20 pb-20">
+          <div className="text-3xl font-bold text-gray-100 font-mono text-center">
+            Certifications
+          </div>
+          <div className="mt-8 text-gray-100 font-mono text-center">
+            {/* Certifications content will go here */}
+            Coming soon...
+          </div>
+        </section>
+      </div>
+    </div>
+  )
+}
+
+export default App
