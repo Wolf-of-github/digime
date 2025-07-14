@@ -10,6 +10,7 @@ import WorkExperience from './components/WorkExperience';
 import Skills from './components/Skills';
 import Footer from './components/Footer';
 import Endorsements from './components/Endorsements';
+import Contact from './components/Contact';
 
 const App = () => {
   return (
@@ -66,6 +67,10 @@ const App = () => {
         {/* Endorsements */}
         <Endorsements />
 
+        {/* Contact */}
+        <section id="contact" className="mt-20">
+          <Contact />
+        </section>
 
       </div>
       <Footer />
