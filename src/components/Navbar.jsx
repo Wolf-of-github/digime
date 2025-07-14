@@ -6,7 +6,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto flex flex-col sm:flex-row sm:justify-between items-center gap-4 sm:gap-0">
         {/* Left: Name */}
         <div className="flex items-center justify-center sm:justify-start w-full sm:w-auto">
-          <a href="#about" className="text-2xl sm:text-3xl font-calibri font-bold hover:cursor-pointer">
+          <a href="/" className="text-2xl sm:text-3xl font-calibri font-bold hover:cursor-pointer">
             Ishaan Apte
           </a>
         </div>
