@@ -36,12 +36,7 @@ const Contact = () => {
   };
 
   return (
-    <section className="relative bg-black text-white px-6 py-20 overflow-hidden">
-      {/* Animated background elements */}
-      <div className="absolute inset-0 opacity-20">
-        <div className="absolute top-1/4 left-1/4 w-72 h-72 rounded-full blur-3xl animate-pulse" style={{ backgroundColor: 'rgb(147, 51, 234)' }}></div>
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 rounded-full blur-3xl animate-pulse delay-1000" style={{ backgroundColor: 'rgb(147, 51, 234)' }}></div>
-      </div>
+    <section className="bg-white bg-opacity-10 rounded-xl px-4 py-10 shadow-lg hover:shadow-2xl transition duration-300 max-w-5xl mx-auto" id="contact">
       
       {/* Content */}
       <div className="relative z-10 max-w-4xl mx-auto">
@@ -63,9 +58,9 @@ const Contact = () => {
         <form 
           ref={form} 
           onSubmit={sendEmail} 
-          className="max-w-2xl mx-auto space-y-6"
+          className="max-w-xl mx-auto space-y-6"
         >
-          <div className="backdrop-blur-sm p-8 rounded-2xl shadow-2xl" style={{ backgroundColor: 'rgba(255, 255, 255, 0.1)', border: '1px solid rgba(255, 255, 255, 0.1)' }}>
+          <div className="backdrop-blur-sm p-6 rounded-3xl shadow-2xl" style={{ backgroundColor: 'rgba(255, 255, 255, 0.1)', border: '1px solid rgba(255, 255, 255, 0.1)' }}>
             {/* Name and Email Row */}
             <div className="grid md:grid-cols-2 gap-6 mb-6">
               <div className="relative">
@@ -195,7 +190,7 @@ const Contact = () => {
           <div className="flex flex-wrap justify-center gap-6">
             <a href="mailto:your.email@example.com" className="flex items-center gap-2 text-white hover:opacity-80 transition-opacity" style={{ color: 'rgb(147, 51, 234)' }}>
               <Mail className="w-4 h-4" />
-              your.email@example.com
+              iapte@usc.edu
             </a>
           </div>
         </div>

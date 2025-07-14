@@ -68,7 +68,7 @@ const App = () => {
         <Endorsements />
 
         {/* Contact */}
-        <section id="contact" className="mt-20">
+        <section id="contact" className="mt-10">
           <Contact />
         </section>
 
