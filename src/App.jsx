@@ -2,17 +2,25 @@ import React from 'react'
 import backgroundImage from './assets/background.jpg'
 import ProfileImage from './components/ProfileImage'
 import Navbar from './components/Navbar'
+import Education from './components/Education'
+import CompetitiveExams from './components/CompetitiveExams'
+import Projects from './components/Projects';
+import CertGallery from './components/CertGallery';
+import WorkExperience from './components/WorkExperience';
+import Skills from './components/Skills';
+import Footer from './components/Footer';
+import Endorsements from './components/Endorsements';
 
 const App = () => {
   return (
     <div
-      className="min-h-screen bg-cover"
+      className="flex flex-col min-h-screen bg-cover"
       style={{ backgroundImage: `url(${backgroundImage})` }}
     >
       <Navbar />
       <div className="px-4 sm:px-8 md:px-16 lg:px-40">
         {/* About Me */}
-        <div id="about" className="flex flex-col pt-10">
+        <div id="about" className="flex flex-col pt-10 bg-gradient-to-b from-gray-800/60 to-transparent rounded-xl px-6 py-12">
           <div className="flex justify-center mt-16 bg-cover">
             <ProfileImage />
           </div>
@@ -26,50 +34,41 @@ const App = () => {
           </div>
         </div>
 
-        {/* Projects */}
-        <section id="projects" className="mt-20">
-          <div className="text-3xl font-bold text-gray-100 font-mono text-center">
-            Projects
-          </div>
-          <div className="mt-8 text-gray-100 font-mono text-center">
-            {/* Project cards or content will go here */}
-            Coming soon...
-          </div>
-        </section>
-
-        {/* Skills */}
-        <section id="skills" className="mt-20">
-          <div className="text-3xl font-bold text-gray-100 font-mono text-center">
-            Skills
-          </div>
-          <div className="mt-8 text-gray-100 font-mono text-center">
-            {/* Skills list will go here */}
-            Coming soon...
-          </div>
-        </section>
-
         {/* Education */}
         <section id="education" className="mt-20">
           <div className="text-3xl font-bold text-gray-100 font-mono text-center">
             Education
           </div>
           <div className="mt-8 text-gray-100 font-mono text-center">
-            {/* Education content will go here */}
-            Coming soon...
+            <Education />
           </div>
         </section>
 
+        {/* Competitive Exams */}
+        <CompetitiveExams />
+
+        {/* Projects */}
+        <Projects />
+
+        {/* Work Experience */}
+        <WorkExperience />
+
         {/* Certifications */}
-        <section id="certifications" className="mt-20 pb-20">
-          <div className="text-3xl font-bold text-gray-100 font-mono text-center">
-            Certifications
-          </div>
-          <div className="mt-8 text-gray-100 font-mono text-center">
-            {/* Certifications content will go here */}
-            Coming soon...
-          </div>
+        <section id="certifications" className="mt-20 pb-8">
+          <CertGallery />
         </section>
+
+        {/* Skills */}
+        <section id="skills" className="mt-20">
+          <Skills />
+        </section>
+
+        {/* Endorsements */}
+        <Endorsements />
+
+
       </div>
+      <Footer />
     </div>
   )
 }
