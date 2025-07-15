@@ -1,4 +1,4 @@
-import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaPenNib } from "react-icons/fa";
 
 export default function Navbar() {
   return (
@@ -30,10 +30,10 @@ export default function Navbar() {
             <FaLinkedin /> <span>LinkedIn</span>
           </a>
           <a
-            href="mailto:iapte@usc.edu"
-            className="hover:text-gray-300 flex items-center gap-1"
+            href="#/blogs"
+            className="hover:text-gray-300 flex items-center gap-1 font-bold"
           >
-            <FaEnvelope /> <span>Email</span>
+            <FaPenNib /> <span>Blog</span>
           </a>
         </div>
       </div>
