@@ -1,1 +1,1 @@
-Find Portfolio [Here]([url](https://ishaanapte.me/))
+Portfolio Link: https://ishaanapte.me/
