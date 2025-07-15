@@ -9,20 +9,6 @@ export default function Projects() {
       github: 'https://github.com/Wolf-of-github/people-detection',
       image: 'https://plus.unsplash.com/premium_photo-1683121713210-97667d2e83c8?q=80&w=2232&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     },
-    {
-      title: 'Health Journalism CMS',
-      tech: ['Drupal', 'HTML/CSS', 'JavaScript'],
-      description: 'Managed and customized a CMS for a journalism nonprofit. Implemented content taxonomy, media handling, and responsive front-end UI for article publishing.',
-      github: 'https://github.com/Wolf-of-github/health-cms',
-      image: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    },
-    {
-      title: 'Job Tracker & Scheduler',
-      tech: ['React', 'Tailwind', 'Node.js'],
-      description: 'Built a personal dashboard app to track job applications, coding practice, research time, and certification goals. Designed a time-blocking interface with productivity stats.',
-      github: 'https://github.com/Wolf-of-github/job-tracker',
-      image: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    }
   ];
 
   return (

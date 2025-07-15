@@ -2,9 +2,9 @@ import React from 'react';
 
 const endorsements = [
   {
-    name: "Dr. Anita Mehra",
-    title: "Professor, USC Viterbi School of Engineering",
-    text: "Ishaan consistently demonstrated initiative, creativity, and leadership in every assignment. His work ethic and commitment to excellence are exemplary.",
+    name: "Mr. Vijay Simha",
+    title: "CEO, Credence Analytics (India) Private Limited",
+    text: "I recommend Ishaan Mihir Apte for his strong work ethic, quick learning ability, and the meaningful contributions he made during his technical internship with us.",
     avatar: "https://media.istockphoto.com/id/1326432425/photo/shot-of-a-mature-business-men-working-at-home-using-laptop-stock-photo.webp?s=1024x1024&w=is&k=20&c=-3mDmAd_NYBfjMIfBrv0PqCdms2pCRnVsDKenOGMKjE=",
   },
   {
@@ -40,7 +40,7 @@ const Endorsements = () => {
               </div>
             </div>
             <blockquote className="text-gray-200 text-sm font-mono italic mb-2">“{endorsement.text}”</blockquote>
-            <footer className="text-xs text-gray-400 font-mono">— {endorsement.name}, {endorsement.title}</footer>
+            {/* <footer className="text-xs text-gray-400 font-mono">— {endorsement.name}, {endorsement.title}</footer> */}
           </div>
         ))}
       </div>

@@ -31,7 +31,10 @@ const App = () => {
           </div>
 
           <div className="text-lg sm:text-xl text-gray-100 font-mono mt-8 text-justify leading-relaxed">
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+          Hi! I'm a graduate student focused on building reliable, scalable, and efficient AI-powered applications. 
+          My work centers around fine-tuning large language models, implementing retrieval-augmented generation (RAG), 
+          and leveraging cloud computing, particularly AWS to streamline AI/ML development. 
+          I'm especially interested in distributed machine learning using Kubernetes, with the goal of accelerating model training and optimizing resource efficiency.
           </div>
         </div>
 
@@ -44,20 +47,21 @@ const App = () => {
             <Education />
           </div>
         </section>
-
-        {/* Competitive Exams */}
-        <CompetitiveExams />
+        
+        {/* Work Experience */}
+        <WorkExperience />
 
         {/* Projects */}
         <Projects />
-
-        {/* Work Experience */}
-        <WorkExperience />
 
         {/* Certifications */}
         <section id="certifications" className="mt-20 pb-8">
           <CertGallery />
         </section>
+
+
+        {/* Competitive Exams */}
+        <CompetitiveExams />
 
         {/* Skills */}
         <section id="skills" className="mt-20">
@@ -65,7 +69,7 @@ const App = () => {
         </section>
 
         {/* Endorsements */}
-        <Endorsements />
+        {/* <Endorsements /> */}
 
         {/* Contact */}
         <section id="contact" className="mt-10">

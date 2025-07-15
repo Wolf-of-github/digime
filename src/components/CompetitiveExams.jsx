@@ -7,18 +7,13 @@ const CompetitiveExams = () => {
   const exams = [
     {
       title: 'GRE',
-      score: '320 / 340',
-      description: 'Focused on quantitative reasoning and analytical writing. Scored 165 in quant and 155 in verbal.'
+      score: '322 / 340',
+      description: 'Focused on quantitative reasoning and analytical writing. Scored 160 in quant and 162 in verbal.'
     },
     {
       title: 'TOEFL',
-      score: '112 / 120',
+      score: '107 / 120',
       description: 'Demonstrated proficiency in academic English across reading, writing, speaking, and listening.'
-    },
-    {
-      title: 'GATE CSE',
-      score: 'AIR 1500',
-      description: 'Tested on core computer science subjects. Strength in algorithms, programming, and databases.'
     }
   ];
 

@@ -1,31 +1,19 @@
 import React, { useState } from "react";
 import aiforbusiness from "../assets/aiforbusiness.png";
-import blockchain from "../assets/blockchain.png";
+import gcloud from "../assets/glcloud.jpeg";
 import mernstack from "../assets/mernstack.jpg";
 
 const certificates = [
   {
-    title: 'AWS Certified Solutions Architect',
+    title: 'AI for Business',
     image: aiforbusiness,
   },
   {
-    title: 'Deep Learning Specialization',
-    image: blockchain,
+    title: 'Cloud Computing Foundations',
+    image: gcloud,
   },
   {
-    title: 'Machine Learning with Python',
-    image: mernstack,
-  },
-  {
-    title: 'Introduction to Cloud Computing',
-    image: aiforbusiness,
-  },
-  {
-    title: 'Responsive Web Design',
-    image: blockchain,
-  },
-  {
-    title: 'Python for Everybody',
+    title: 'Full Stack Web Dev',
     image: mernstack,
   },
 ];
