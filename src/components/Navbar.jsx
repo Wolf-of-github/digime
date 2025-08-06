@@ -1,9 +1,21 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Github, Linkedin, PenTool } from "lucide-react";
 
 export default function Navbar() {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 10);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <nav className="sticky top-0 z-50 text-white w-full py-4 px-6 sm:px-12">
+    <nav className={`sticky top-0 z-50 text-white w-full py-4 px-6 sm:px-12 transition-all duration-300 ${
+      isScrolled ? 'bg-black/40 backdrop-blur-md shadow-md' : 'bg-transparent'
+    }`}>
       <div className="max-w-7xl mx-auto flex flex-col sm:flex-row sm:justify-between items-center gap-4 sm:gap-0">
         
         {/* Left: Name */}

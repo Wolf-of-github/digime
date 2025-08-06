@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
+import emailjs from '@emailjs/browser';
 import { Send, Mail, User, MessageCircle, MapPin, Phone, Linkedin, Github, CheckCircle, AlertCircle, Clock } from 'lucide-react';
 
 const Contact = () => {
@@ -11,6 +12,7 @@ const Contact = () => {
   const [messageSent, setMessageSent] = useState(false);
   const [formStatus, setFormStatus] = useState('');
   const [isLoading, setIsLoading] = useState(false);
+  const form = useRef();
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -24,22 +26,26 @@ const Contact = () => {
     setIsLoading(true);
     setFormStatus('Sending...');
 
-    // Simulate API call - replace with actual emailjs implementation
-    setTimeout(() => {
-      setMessageSent(true);
-      setFormStatus('Message sent successfully!');
-      setIsLoading(false);
-      setFormData({
-        user_name: '',
-        user_email: '',
-        subject: '',
-        message: ''
+    emailjs.sendForm('service_jtvu3qt', 'template_3kficon', form.current, '7Cc_vyP4WFrvI0n3l')
+      .then(() => {
+        setMessageSent(true);
+        setFormStatus('Message sent successfully!');
+        setIsLoading(false);
+        setFormData({
+          user_name: '',
+          user_email: '',
+          subject: '',
+          message: ''
+        });
+        setTimeout(() => {
+          setMessageSent(false);
+          setFormStatus('');
+        }, 5000);
+      })
+      .catch(() => {
+        setFormStatus('Failed to send message. Please try again.');
+        setIsLoading(false);
       });
-      setTimeout(() => {
-        setMessageSent(false);
-        setFormStatus('');
-      }, 5000);
-    }, 2000);
   };
 
   const handleSubmit = (e) => {
@@ -50,7 +56,7 @@ const Contact = () => {
   };
 
   return (
-    <section className="mt-20">
+    <section className="mt-20 mb-20">
       {/* Section Header */}
       <div className="text-center mb-12">
         <h2 className="text-4xl font-bold text-gray-100 font-mono mb-4">
@@ -156,7 +162,7 @@ const Contact = () => {
               </div>
 
               {/* Contact Form UI */}
-              <div className="space-y-6">
+              <form ref={form} onSubmit={handleSubmit} className="space-y-6">
                 
                 {/* Name and Email Row */}
                 <div className="grid md:grid-cols-2 gap-6">
@@ -215,7 +221,7 @@ const Contact = () => {
 
                 {/* Submit Button */}
                 <button
-                  onClick={handleSubmit}
+                  type="submit"
                   disabled={isLoading || !formData.user_name || !formData.user_email || !formData.subject || !formData.message}
                   className="w-full py-4 px-6 bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-mono font-medium rounded-lg transition-all duration-300 transform hover:scale-105 disabled:scale-100 disabled:cursor-not-allowed disabled:opacity-50 flex items-center justify-center gap-3"
                 >
@@ -253,7 +259,7 @@ const Contact = () => {
                     </div>
                   </div>
                 )}
-              </div>
+              </form>
             </div>
           </div>
         </div>

@@ -21,7 +21,7 @@ const App = () => {
 
       <div className="px-4 sm:px-8 md:px-16 lg:px-40">
 
-        <section className="mt-10">
+        <section className="">
           <AboutMe />
         </section>
 

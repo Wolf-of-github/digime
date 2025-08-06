@@ -34,7 +34,7 @@ export default function CertGallery() {
   const [selectedCert, setSelectedCert] = useState(null);
 
   return (
-    <div className="text-gray-100">
+    <div className="text-gray-100 mt-20">
       {/* Section Header */}
       <div className="text-center mb-12">
         <h2 className="text-4xl font-bold text-gray-100 font-mono mb-4">
