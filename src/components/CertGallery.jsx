@@ -1,20 +1,32 @@
 import React, { useState } from "react";
-import aiforbusiness from "../assets/aiforbusiness.png";
-import gcloud from "../assets/glcloud.jpeg";
-import mernstack from "../assets/mernstack.jpg";
+import { X, Award, Calendar, Building, Eye, ExternalLink } from "lucide-react";
+
+// Placeholder images - replace with your actual imports
+const aiforbusinessImage = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='200' viewBox='0 0 300 200'%3E%3Crect width='300' height='200' fill='%23667eea'/%3E%3Ctext x='150' y='85' font-family='Arial, sans-serif' font-size='18' fill='white' text-anchor='middle'%3EAI for%3C/text%3E%3Ctext x='150' y='110' font-family='Arial, sans-serif' font-size='18' fill='white' text-anchor='middle'%3EBusiness%3C/text%3E%3C/svg%3E";
+const gcloudImage = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='200' viewBox='0 0 300 200'%3E%3Crect width='300' height='200' fill='%234285f4'/%3E%3Ctext x='150' y='85' font-family='Arial, sans-serif' font-size='16' fill='white' text-anchor='middle'%3EGoogle Cloud%3C/text%3E%3Ctext x='150' y='110' font-family='Arial, sans-serif' font-size='14' fill='white' text-anchor='middle'%3EFoundations%3C/text%3E%3C/svg%3E";
+const mernstackImage = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='200' viewBox='0 0 300 200'%3E%3Crect width='300' height='200' fill='%2361dafb'/%3E%3Ctext x='150' y='85' font-family='Arial, sans-serif' font-size='18' fill='white' text-anchor='middle'%3EMERN%3C/text%3E%3Ctext x='150' y='110' font-family='Arial, sans-serif' font-size='16' fill='white' text-anchor='middle'%3EStack%3C/text%3E%3C/svg%3E";
 
 const certificates = [
   {
     title: 'AI for Business',
-    image: aiforbusiness,
+    image: aiforbusinessImage,
+    issuer: 'Educational Provider',
+    date: '2024',
+    category: 'Artificial Intelligence'
   },
   {
     title: 'Cloud Computing Foundations',
-    image: gcloud,
+    image: gcloudImage,
+    issuer: 'Google Cloud',
+    date: '2024',
+    category: 'Cloud Computing'
   },
   {
-    title: 'Full Stack Web Dev',
-    image: mernstack,
+    title: 'Full Stack Web Development',
+    image: mernstackImage,
+    issuer: 'Tech Academy',
+    date: '2023',
+    category: 'Web Development'
   },
 ];
 
@@ -23,39 +35,132 @@ export default function CertGallery() {
 
   return (
     <div className="text-gray-100">
-      <h2 className="text-3xl font-bold font-mono text-center mb-8">Certifications</h2>
+      {/* Section Header */}
+      <div className="text-center mb-12">
+        <h2 className="text-4xl font-bold text-gray-100 font-mono mb-4">
+          Certifications
+        </h2>
+        <div className="w-24 h-1 bg-gradient-to-r from-blue-400 to-purple-500 mx-auto"></div>
+      </div>
+
+      {/* Certifications Gallery */}
       <div className="flex flex-wrap justify-center gap-8">
         {certificates.map((cert, index) => (
-          <div key={index} className="w-full sm:w-[45%] lg:w-[28%] cursor-pointer" onClick={() => setSelectedCert(cert)}>
-            <div className="bg-white bg-opacity-10 rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition duration-300">
-              <img
-                src={cert.image}
-                alt={cert.title}
-                className="w-full h-56 object-contain object-center bg-white bg-opacity-10"
-              />
-              <div className="p-4 text-center">
-                <h3 className="text-lg font-semibold">{cert.title}</h3>
+          <div 
+            key={index} 
+            className="w-full sm:w-[45%] lg:w-[28%] cursor-pointer group"
+            onClick={() => setSelectedCert(cert)}
+          >
+            <div className="bg-white bg-opacity-10 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:bg-opacity-15 hover:scale-105">
+              
+              {/* Certificate Image */}
+              <div className="relative overflow-hidden">
+                <img
+                  src={cert.image}
+                  alt={cert.title}
+                  className="w-full h-56 object-contain object-center bg-white bg-opacity-5 group-hover:scale-110 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-tr from-blue-400/10 to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                
+                {/* Hover Overlay */}
+                <div className="absolute inset-0 bg-gray-900/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                  <div className="text-center">
+                    <Eye className="w-8 h-8 text-white mb-2 mx-auto" />
+                    <p className="text-white font-mono text-sm">View Certificate</p>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Certificate Info */}
+              <div className="p-6 text-center">
+                <h3 className="text-xl font-bold text-white font-mono mb-3 leading-tight">
+                  {cert.title}
+                </h3>
+                
+                <div className="space-y-2 mb-4">
+                  <div className="flex items-center justify-center gap-2">
+                    <Building className="w-4 h-4 text-blue-400" />
+                    <span className="text-gray-300 font-mono text-sm">
+                      {cert.issuer}
+                    </span>
+                  </div>
+                  
+                  <div className="flex items-center justify-center gap-2">
+                    <Calendar className="w-4 h-4 text-purple-400" />
+                    <span className="text-gray-400 font-mono text-sm">
+                      {cert.date}
+                    </span>
+                  </div>
+                </div>
+
+                {/* Category Badge */}
+                <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-400/30 text-blue-200 px-4 py-2 rounded-full text-xs font-mono font-medium">
+                  <Award className="w-3 h-3" />
+                  {cert.category}
+                </div>
               </div>
             </div>
           </div>
         ))}
       </div>
 
+      {/* Modal for Certificate View */}
       {selectedCert && (
-        <div className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50">
-          <div className="bg-gray-900 p-6 rounded-lg relative max-w-3xl w-[90%]">
-            <button
-              className="absolute top-2 right-4 text-white text-2xl"
-              onClick={() => setSelectedCert(null)}
-            >
-              &times;
-            </button>
-            <img
-              src={selectedCert.image}
-              alt={selectedCert.title}
-              className="w-full max-h-[80vh] object-contain rounded"
-            />
-            <h3 className="text-xl font-bold text-center mt-4">{selectedCert.title}</h3>
+        <div className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50 p-4">
+          <div className="bg-gray-900 rounded-xl relative max-w-4xl w-full max-h-[90vh] overflow-hidden border border-gray-700">
+            
+            {/* Modal Header */}
+            <div className="flex items-center justify-between p-6 border-b border-gray-700">
+              <div>
+                <h3 className="text-2xl font-bold text-white font-mono">
+                  {selectedCert.title}
+                </h3>
+                <div className="flex items-center gap-4 mt-2">
+                  <div className="flex items-center gap-2">
+                    <Building className="w-4 h-4 text-blue-400" />
+                    <span className="text-gray-300 font-mono text-sm">
+                      {selectedCert.issuer}
+                    </span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Calendar className="w-4 h-4 text-purple-400" />
+                    <span className="text-gray-400 font-mono text-sm">
+                      {selectedCert.date}
+                    </span>
+                  </div>
+                </div>
+              </div>
+              
+              <button
+                className="text-gray-400 hover:text-white p-2 rounded-lg hover:bg-gray-800 transition-all duration-200"
+                onClick={() => setSelectedCert(null)}
+              >
+                <X className="w-6 h-6" />
+              </button>
+            </div>
+            
+            {/* Modal Content */}
+            <div className="p-6 text-center">
+              <img
+                src={selectedCert.image}
+                alt={selectedCert.title}
+                className="w-full max-h-[60vh] object-contain rounded-lg bg-white bg-opacity-5 p-4"
+              />
+              
+              <div className="mt-6">
+                <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-400/30 text-blue-200 px-4 py-2 rounded-full font-mono font-medium">
+                  <Award className="w-4 h-4" />
+                  {selectedCert.category}
+                </div>
+              </div>
+              
+              <div className="mt-6">
+                <button className="bg-gradient-to-r from-blue-500 to-purple-600 text-white py-3 px-6 rounded-lg font-mono font-medium hover:from-blue-600 hover:to-purple-700 transition-all duration-200 flex items-center justify-center gap-2 mx-auto">
+                  <ExternalLink className="w-4 h-4" />
+                  Verify Certificate
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       )}

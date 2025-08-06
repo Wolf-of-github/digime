@@ -1,5 +1,4 @@
 import React from 'react'
-import backgroundImage from './assets/background.jpg'
 import ProfileImage from './components/ProfileImage'
 import Navbar from './components/Navbar'
 import Education from './components/Education'
@@ -14,14 +13,11 @@ import Contact from './components/Contact';
 
 const App = () => {
   return (
-    <div
-      className="flex flex-col min-h-screen bg-cover"
-      style={{ backgroundImage: `url(${backgroundImage})` }}
-    >
+    <div className="flex flex-col min-h-screen bg-black">
+      
       <Navbar />
-      <div className="px-4 sm:px-8 md:px-16 lg:px-40">
-        {/* About Me */}
-        <div id="about" className="flex flex-col pt-10 bg-gradient-to-b from-gray-800/60 to-transparent rounded-xl px-6 py-12">
+      
+      <div id="about" className="flex flex-col pt-10 bg-gradient-to-b from-gray-800/60 to-transparent rounded-xl px-6 py-12">
           <div className="flex justify-center mt-16 bg-cover">
             <ProfileImage />
           </div>
@@ -36,23 +32,24 @@ const App = () => {
           and leveraging cloud computing, particularly AWS to streamline AI/ML development. 
           I'm especially interested in distributed machine learning using Kubernetes, with the goal of accelerating model training and optimizing resource efficiency.
           </div>
-        </div>
+      </div>
+      
+      <div className="px-4 sm:px-8 md:px-16 lg:px-40">
 
         {/* Education */}
-        <section id="education" className="mt-20">
-          <div className="text-3xl font-bold text-gray-100 font-mono text-center">
-            Education
-          </div>
-          <div className="mt-8 text-gray-100 font-mono text-center">
+        
+          <div id = "education" className="mt-8 text-gray-100 font-mono text-center">
             <Education />
           </div>
-        </section>
         
-        {/* Work Experience */}
-        <WorkExperience />
+        <section id="certifications" className="mt-20 pb-8">
+          <WorkExperience />
+        </section>
 
         {/* Projects */}
+        <section>
         <Projects />
+        </section>
 
         {/* Certifications */}
         <section id="certifications" className="mt-20 pb-8">
@@ -64,18 +61,13 @@ const App = () => {
           <Skills />
         </section>
 
-        {/* Competitive Exams */}
-        <CompetitiveExams />
-
-        {/* Endorsements */}
-        {/* <Endorsements /> */}
-
         {/* Contact */}
         <section id="contact" className="mt-24">
           <Contact />
         </section>
 
       </div>
+      
       <Footer />
     </div>
   )
