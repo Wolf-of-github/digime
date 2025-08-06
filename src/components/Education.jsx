@@ -3,7 +3,7 @@ import { GraduationCap, Calendar, Award, BookOpen, MapPin } from 'lucide-react';
 
 import uscLogo from '../assets/viterbiLogo.jpg'
 import umomLogo from '../assets/umom.jpg'
-import ruparelLogo from '../assets/ruparel.png'
+import ruparelLogo from '../assets/dg.jpg'
 
 const educationData = [
   {
