@@ -2,9 +2,9 @@ import React from 'react';
 import { Github, ExternalLink, Code, Cpu, Database, Zap, Star, Calendar } from 'lucide-react';
 
 // Placeholder images - replace with your actual imports
-const mlxImage = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='200' viewBox='0 0 300 200'%3E%3Crect width='300' height='200' fill='%23667eea'/%3E%3Ctext x='150' y='90' font-family='Arial, sans-serif' font-size='20' fill='white' text-anchor='middle'%3EMLX%3C/text%3E%3Ctext x='150' y='115' font-family='Arial, sans-serif' font-size='14' fill='white' text-anchor='middle'%3EMedical AI%3C/text%3E%3C/svg%3E";
+import chipImage from '../assets/chip.png'
 const symptomsftImage = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='200' viewBox='0 0 300 200'%3E%3Crect width='300' height='200' fill='%23f093fb'/%3E%3Ctext x='150' y='95' font-family='Arial, sans-serif' font-size='16' fill='white' text-anchor='middle'%3ESymptom%3C/text%3E%3Ctext x='150' y='115' font-family='Arial, sans-serif' font-size='16' fill='white' text-anchor='middle'%3ETracker%3C/text%3E%3C/svg%3E";
-const chipImage = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='200' viewBox='0 0 300 200'%3E%3Crect width='300' height='200' fill='%234facfe'/%3E%3Ctext x='150' y='95' font-family='Arial, sans-serif' font-size='18' fill='white' text-anchor='middle'%3EApple%3C/text%3E%3Ctext x='150' y='115' font-family='Arial, sans-serif' font-size='18' fill='white' text-anchor='middle'%3ESilicon%3C/text%3E%3C/svg%3E";
+// const chipImage = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='200' viewBox='0 0 300 200'%3E%3Crect width='300' height='200' fill='%234facfe'/%3E%3Ctext x='150' y='95' font-family='Arial, sans-serif' font-size='18' fill='white' text-anchor='middle'%3EApple%3C/text%3E%3Ctext x='150' y='115' font-family='Arial, sans-serif' font-size='18' fill='white' text-anchor='middle'%3ESilicon%3C/text%3E%3C/svg%3E";
 
 export default function Projects() {
   const projectList = [
@@ -24,22 +24,22 @@ export default function Projects() {
         'Quantized 8B parameter model optimization'
       ]
     },
-    {
-      title: 'Coming Soon - More Projects',
-      tech: ['React', 'Node.js', 'Python', 'TensorFlow'],
-      description: 'Additional exciting projects are in development. Stay tuned for updates on full-stack applications, machine learning models, and innovative solutions.',
-      github: '#',
-      image: symptomsftImage,
-      category: 'Full Stack',
-      status: 'In Development',
-      date: '2024',
-      highlights: [
-        'Modern web technologies',
-        'Scalable architecture',
-        'User-centric design',
-        'Performance optimization'
-      ]
-    }
+    // {
+    //   title: 'Coming Soon - More Projects',
+    //   tech: ['React', 'Node.js', 'Python', 'TensorFlow'],
+    //   description: 'Additional exciting projects are in development. Stay tuned for updates on full-stack applications, machine learning models, and innovative solutions.',
+    //   github: '#',
+    //   image: symptomsftImage,
+    //   category: 'Full Stack',
+    //   status: 'In Development',
+    //   date: '2024',
+    //   highlights: [
+    //     'Modern web technologies',
+    //     'Scalable architecture',
+    //     'User-centric design',
+    //     'Performance optimization'
+    //   ]
+    // }
   ];
 
   return (

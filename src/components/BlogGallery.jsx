@@ -1,5 +1,4 @@
 import React from 'react';
-import backgroundImage from '../assets/background.jpg';
 import Navbar from './Navbar';
 import Footer from './Footer';
 import LoRA_QLoRA_Blog_1 from "../assets/LoRA_QLoRA_Blog-1.png";
@@ -17,10 +16,7 @@ const BlogGallery = () => {
   ];
 
   return (
-    <div
-      className="flex flex-col min-h-screen bg-cover"
-      style={{ backgroundImage: `url(${backgroundImage})` }}
-    >
+    <div className="flex flex-col min-h-screen bg-black">
       <Navbar />
       <div className="flex-grow px-4 sm:px-8 md:px-16 lg:px-40 py-20">
         <div className="text-3xl font-bold text-gray-100 font-mono text-center mb-10">

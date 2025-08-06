@@ -2,7 +2,7 @@ import React from 'react';
 import { ExternalLink, Calendar, Building, Award, MapPin } from 'lucide-react';
 
 // Placeholder for company logo - replace with your actual import
-const credenceLogo = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%234F46E5'/%3E%3Ctext x='50' y='55' font-family='Arial, sans-serif' font-size='16' fill='white' text-anchor='middle'%3ECredence%3C/text%3E%3C/svg%3E";
+import credenceLogo from '../assets/credencelogonew.png'
 
 const experiences = [
   {

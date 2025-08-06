@@ -1,15 +1,14 @@
 import React from 'react';
 import { GraduationCap, Calendar, Award, BookOpen, MapPin } from 'lucide-react';
 
-// Placeholder logos - replace with your actual imports
-const viterbiLogo = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23990000'/%3E%3Ctext x='50' y='45' font-family='Arial, sans-serif' font-size='12' fill='white' text-anchor='middle'%3EUSC%3C/text%3E%3Ctext x='50' y='60' font-family='Arial, sans-serif' font-size='8' fill='white' text-anchor='middle'%3EViterbi%3C/text%3E%3C/svg%3E";
-const umomLogo = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23003366'/%3E%3Ctext x='50' y='45' font-family='Arial, sans-serif' font-size='10' fill='white' text-anchor='middle'%3EUniversity%3C/text%3E%3Ctext x='50' y='60' font-family='Arial, sans-serif' font-size='10' fill='white' text-anchor='middle'%3Eof Mumbai%3C/text%3E%3C/svg%3E";
-const ruparelLogo = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23228B22'/%3E%3Ctext x='50' y='45' font-family='Arial, sans-serif' font-size='12' fill='white' text-anchor='middle'%3ED.G.%3C/text%3E%3Ctext x='50' y='60' font-family='Arial, sans-serif' font-size='10' fill='white' text-anchor='middle'%3ERuparel%3C/text%3E%3C/svg%3E";
+import uscLogo from '../assets/viterbiLogo.jpg'
+import umomLogo from '../assets/umom.jpg'
+import ruparelLogo from '../assets/ruparel.png'
 
 const educationData = [
   {
     institution: 'University of Southern California',
-    logo: viterbiLogo,
+    logo: uscLogo,
     degree: 'M.S. in Computer Science',
     duration: '2024 – 2026',
     gpa: '3.275 / 4.0',
@@ -47,7 +46,7 @@ const educationData = [
 
 const Education = () => {
   return (
-    <section className="mt-20">
+    <section className="mt-10">
       {/* Section Header */}
       <div className="text-center mb-12">
         <h2 className="text-4xl font-bold text-gray-100 font-mono mb-4">

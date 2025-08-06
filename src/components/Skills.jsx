@@ -97,7 +97,7 @@ export default function Skills() {
                       className={`h-full bg-gradient-to-r ${category.color} rounded-full transition-all duration-700 ease-out group-hover/skill:animate-pulse`}
                       style={{ width: `${skill.level}%` }}
                     >
-                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -skew-x-12 translate-x-[-100%] group-hover/skill:animate-[shimmer_1s_ease-out] group-hover/skill:translate-x-[200%]"></div>
+                      {/* <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -skew-x-12 translate-x-[-100%] group-hover/skill:animate-[shimmer_1s_ease-out] group-hover/skill:translate-x-[200%]"></div> */}
                     </div>
                   </div>
                 </div>

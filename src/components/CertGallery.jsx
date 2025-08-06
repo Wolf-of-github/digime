@@ -2,31 +2,31 @@ import React, { useState } from "react";
 import { X, Award, Calendar, Building, Eye, ExternalLink } from "lucide-react";
 
 // Placeholder images - replace with your actual imports
-const aiforbusinessImage = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='200' viewBox='0 0 300 200'%3E%3Crect width='300' height='200' fill='%23667eea'/%3E%3Ctext x='150' y='85' font-family='Arial, sans-serif' font-size='18' fill='white' text-anchor='middle'%3EAI for%3C/text%3E%3Ctext x='150' y='110' font-family='Arial, sans-serif' font-size='18' fill='white' text-anchor='middle'%3EBusiness%3C/text%3E%3C/svg%3E";
-const gcloudImage = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='200' viewBox='0 0 300 200'%3E%3Crect width='300' height='200' fill='%234285f4'/%3E%3Ctext x='150' y='85' font-family='Arial, sans-serif' font-size='16' fill='white' text-anchor='middle'%3EGoogle Cloud%3C/text%3E%3Ctext x='150' y='110' font-family='Arial, sans-serif' font-size='14' fill='white' text-anchor='middle'%3EFoundations%3C/text%3E%3C/svg%3E";
-const mernstackImage = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='200' viewBox='0 0 300 200'%3E%3Crect width='300' height='200' fill='%2361dafb'/%3E%3Ctext x='150' y='85' font-family='Arial, sans-serif' font-size='18' fill='white' text-anchor='middle'%3EMERN%3C/text%3E%3Ctext x='150' y='110' font-family='Arial, sans-serif' font-size='16' fill='white' text-anchor='middle'%3EStack%3C/text%3E%3C/svg%3E";
+import aiforbusinessImage from '../assets/aiforbusiness.png'
+import mlaco1 from '../assets/mlaco1.jpg'
+import mernstackImage from '../assets/mernstack.jpg'
 
 const certificates = [
   {
     title: 'AI for Business',
     image: aiforbusinessImage,
-    issuer: 'Educational Provider',
-    date: '2024',
+    issuer: 'Udemy',
+    date: '2023',
     category: 'Artificial Intelligence'
-  },
-  {
-    title: 'Cloud Computing Foundations',
-    image: gcloudImage,
-    issuer: 'Google Cloud',
-    date: '2024',
-    category: 'Cloud Computing'
   },
   {
     title: 'Full Stack Web Development',
     image: mernstackImage,
-    issuer: 'Tech Academy',
-    date: '2023',
+    issuer: 'Udemy',
+    date: '2024',
     category: 'Web Development'
+  },
+  {
+    title: 'Machine Learning Engineer - Associate',
+    image: mlaco1,
+    issuer: 'AWS',
+    date: '2025',
+    category: 'ML Ops'
   },
 ];
 
@@ -154,12 +154,12 @@ export default function CertGallery() {
                 </div>
               </div>
               
-              <div className="mt-6">
+              {/* <div className="mt-6">
                 <button className="bg-gradient-to-r from-blue-500 to-purple-600 text-white py-3 px-6 rounded-lg font-mono font-medium hover:from-blue-600 hover:to-purple-700 transition-all duration-200 flex items-center justify-center gap-2 mx-auto">
                   <ExternalLink className="w-4 h-4" />
                   Verify Certificate
                 </button>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
