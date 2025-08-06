@@ -7,13 +7,13 @@ import coverImg from "../../assets/LoRA_QLoRA_Blog-1.png"
 const LoRA_QLoRA_Blog = () => {
   return (
     <div
-      className="flex flex-col min-h-screen bg-cover"
+      className="flex flex-col min-h-screen bg-cover overflow-x-hidden"
       style={{ backgroundImage: `url(${backgroundImage})` }}
     >
       <Navbar />
-      <div className="flex-grow px-4 sm:px-8 md:px-16 lg:px-40 py-16 text-white">
+      <div className="flex-grow px-4 sm:px-6 md:px-12 lg:px-32 py-10 sm:py-16 text-white">
         <header className="text-center mb-12">
-          <h1 className="text-5xl font-bold mb-4 leading-tight">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 leading-tight">
             LoRA and QLoRA: Efficient Fine-Tuning
           </h1>
           <div className="text-sm text-gray-300">
@@ -26,7 +26,7 @@ const LoRA_QLoRA_Blog = () => {
             <img
               src={coverImg}
               alt="Blog Cover"
-              className="rounded-lg shadow-lg w-full h-72"
+              className="rounded-lg shadow-lg w-full max-h-72 sm:max-h-96 object-cover"
             />
           </div>
         </div>
@@ -34,24 +34,24 @@ const LoRA_QLoRA_Blog = () => {
         <article className="prose prose-invert prose-lg max-w-3xl mx-auto text-justify">
 
           <section className="mb-12">
-              <h2 className="text-3xl font-extrabold mt-8 mb-4">Introduction</h2>
+              <h2 className="text-2xl sm:text-3xl font-extrabold mt-8 mb-4">Introduction</h2>
               <p>Large language models like GPT-3 are powerful but extremely resource-intensive, with sizes reaching hundreds of gigabytes due to billions of high-precision weights. To make fine-tuning feasible, engineers use techniques like quantization to reduce model size and LoRA (Low-Rank Adaptation) to update only a small portion of the model’s parameters. An improved version, QLoRA, combines both ideas for even greater efficiency. In this blog, we’ll explore how these methods work and why they matter for practical, scalable fine-tuning.</p>
           </section>
 
           <section className="mb-12">
-              <h2 className="text-3xl font-extrabold mt-8 mb-4">Understanding Precision</h2>
+              <h2 className="text-2xl sm:text-3xl font-extrabold mt-8 mb-4">Understanding Precision</h2>
               <p>Before we dive deep into LoRA, let’s discuss precision. Every model has a weight matrix associated with it, and the number of weights equals the number of parameters. For instance, the original GPT-3 175B model has 175 billion parameters, each represented by float32 (32 bits), making the model approximately 700 GB in size (175B × 32 bits ÷ 8 = 700 GB).</p>
 
               <p>To reduce model size, engineers often opt for lower precision types, such as float16 or int4, effectively halving or quartering the model size. However, this reduces the information each weight represents, potentially impacting model performance.</p>
           </section>
 
           <section className="mb-12">
-              <h2 className="text-3xl font-extrabold mt-8 mb-4">Quantization: Reducing Model Size</h2>
+              <h2 className="text-2xl sm:text-3xl font-extrabold mt-8 mb-4">Quantization: Reducing Model Size</h2>
               <p>Engineers have developed quantization to reduce model size with minimal accuracy loss. Quantization works by representing weights using lower-precision values (e.g., 8-bit or 4-bit instead of 32-bit), employing scaling factors to map high-precision values into a reduced range.</p>
           </section>
 
           <section className="mb-12">
-              <h2 className="text-3xl font-extrabold mt-8 mb-4">LoRA: Parameter-Efficient Fine-Tuning (PEFT)</h2>
+              <h2 className="text-2xl sm:text-3xl font-extrabold mt-8 mb-4">LoRA: Parameter-Efficient Fine-Tuning (PEFT)</h2>
               <p>Reducing model size with techniques like quantization is beneficial, but LoRA fine-tuning offers a more robust alternative. LoRA belongs to the class of Parameter Efficient Fine Tuning (PEFT), updating only a small subset of model parameters. Unlike full fine-tuning, which updates all weights and is extremely resource-intensive, LoRA significantly reduces compute and memory costs.</p>
 
               <p>The standard update equation is <code>W_new = W_old + ΔW</code>. In LoRA, instead of learning the full ΔW, it is decomposed into smaller low-rank matrices A and B such that <code>ΔW ≈ A × B</code>. These matrices are smaller, reducing costs. The full ΔW is reconstructed on-the-fly during training or inference, providing efficient updates with negligible precision loss.</p>
@@ -64,7 +64,7 @@ const LoRA_QLoRA_Blog = () => {
           </section>
 
           <section className="mb-12">
-              <h2 className="text-3xl font-extrabold mt-8 mb-4">QLoRA: Combining LoRA and Quantization</h2>
+              <h2 className="text-2xl sm:text-3xl font-extrabold mt-8 mb-4">QLoRA: Combining LoRA and Quantization</h2>
               <p>QLoRA improves LoRA by fine-tuning large language models with significantly less memory. It applies LoRA adapters to models compressed via 4-bit quantization, keeping high performance despite quantization. Key insights from QLoRA include:</p>
               <ul>
                   <li>Applying LoRA adapters to all layers improves results.</li>
@@ -77,7 +77,7 @@ const LoRA_QLoRA_Blog = () => {
           </section>
 
           <section className="mb-12">
-              <h2 className="text-3xl font-extrabold mt-8 mb-4">Next Steps</h2>
+              <h2 className="text-2xl sm:text-3xl font-extrabold mt-8 mb-4">Next Steps</h2>
               <p>Stay tuned as we transition from theory to practice. In the next section, we'll provide a hands-on implementation of LoRA and QLoRA, guiding you step-by-step through efficiently fine-tuning large models on limited hardware.</p>
           </section>
 

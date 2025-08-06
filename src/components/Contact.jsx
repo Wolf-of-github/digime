@@ -36,7 +36,7 @@ const Contact = () => {
   };
 
   return (
-    <section className="bg-white bg-opacity-10 rounded-xl px-4 py-10 shadow-lg hover:shadow-2xl transition duration-300 max-w-5xl mx-auto" id="contact">
+    <section className="bg-white bg-opacity-10 rounded-xl px-4 py-6 shadow-lg hover:shadow-2xl transition duration-300 max-w-5xl mx-auto" id="contact">
       
       {/* Content */}
       <div className="relative z-10 max-w-4xl mx-auto">
@@ -58,9 +58,9 @@ const Contact = () => {
         <form 
           ref={form} 
           onSubmit={sendEmail} 
-          className="max-w-xl mx-auto space-y-6"
+          className="max-w-xl mx-auto space-y-4"
         >
-          <div className="backdrop-blur-sm p-6 rounded-3xl shadow-2xl" style={{ backgroundColor: 'rgba(255, 255, 255, 0.1)', border: '1px solid rgba(255, 255, 255, 0.1)' }}>
+          <div className="backdrop-blur-sm p-4 rounded-3xl shadow-2xl" style={{ backgroundColor: 'rgba(255, 255, 255, 0.1)', border: '1px solid rgba(255, 255, 255, 0.1)' }}>
             {/* Name and Email Row */}
             <div className="grid md:grid-cols-2 gap-6 mb-6">
               <div className="relative">
@@ -162,7 +162,7 @@ const Contact = () => {
 
             {/* Status Message */}
             {formStatus && (
-              <div className={`mt-6 p-4 rounded-xl text-center transition-all duration-300 ${
+              <div className={`mt-4 p-4 rounded-xl text-center transition-all duration-300 ${
                 formStatus.includes('successfully') 
                   ? 'text-white' 
                   : formStatus.includes('Sending') 
@@ -185,7 +185,7 @@ const Contact = () => {
         </form>
 
         {/* Contact Info */}
-        <div className="mt-16 text-center">
+        <div className="mt-8 text-center">
           <p className="text-gray-300 mb-4">Prefer to reach out directly?</p>
           <div className="flex flex-wrap justify-center gap-6">
             <a href="mailto:your.email@example.com" className="flex items-center gap-2 text-white hover:opacity-80 transition-opacity" style={{ color: 'rgb(147, 51, 234)' }}>

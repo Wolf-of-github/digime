@@ -59,20 +59,19 @@ const App = () => {
           <CertGallery />
         </section>
 
-
-        {/* Competitive Exams */}
-        <CompetitiveExams />
-
         {/* Skills */}
         <section id="skills" className="mt-20">
           <Skills />
         </section>
 
+        {/* Competitive Exams */}
+        <CompetitiveExams />
+
         {/* Endorsements */}
         {/* <Endorsements /> */}
 
         {/* Contact */}
-        <section id="contact" className="mt-10">
+        <section id="contact" className="mt-24">
           <Contact />
         </section>
 

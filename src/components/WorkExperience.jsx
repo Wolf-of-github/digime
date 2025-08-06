@@ -55,17 +55,17 @@ export default function WorkExperience() {
                     
                     <div className="flex flex-col sm:flex-row sm:items-center gap-4 mb-3">
                       <div className="flex items-center gap-2">
-                        <Building className="w-4 h-4 text-purple-400" />
+                        <Building className="w-4 h-4 text-gray-400" />
                         <p className="text-lg text-gray-300 font-mono">{exp.company}</p>
                       </div>
                       
                       <div className="flex items-center gap-2">
-                        <Calendar className="w-4 h-4 text-purple-400" />
+                        <Calendar className="w-4 h-4 text-gray-400" />
                         <p className="text-sm text-gray-400 italic">{exp.duration}</p>
                       </div>
                       
-                      <div className="inline-flex items-center gap-1 bg-purple-500 bg-opacity-20 text-purple-300 px-3 py-1 rounded-full text-xs font-medium">
-                        <div className="w-2 h-2 bg-purple-400 rounded-full"></div>
+                      <div className="inline-flex items-center gap-1 bg-gray-600 bg-opacity-30 text-gray-300 px-3 py-1 rounded-full text-xs font-medium">
+                        <div className="w-2 h-2 bg-gray-400 rounded-full"></div>
                         {exp.period}
                       </div>
                     </div>
@@ -96,13 +96,13 @@ export default function WorkExperience() {
                   {/* Key Achievements */}
                   <div>
                     <h4 className="text-sm font-semibold text-gray-300 mb-2 uppercase tracking-wide flex items-center gap-2">
-                      <Award className="w-4 h-4 text-purple-400" />
+                      <Award className="w-4 h-4 text-gray-400" />
                       Key Achievements
                     </h4>
                     <div className="space-y-2">
                       {exp.achievements.map((achievement, achIndex) => (
                         <div key={achIndex} className="flex items-start gap-2">
-                          <div className="w-1.5 h-1.5 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div>
+                          <div className="w-1.5 h-1.5 bg-gray-400 rounded-full mt-2 flex-shrink-0"></div>
                           <span className="text-sm text-gray-300">{achievement}</span>
                         </div>
                       ))}
@@ -117,7 +117,7 @@ export default function WorkExperience() {
                   href="https://drive.google.com/file/d/1jNoR-XC1pDN1PRNdpPc3aENfcIjtusRQ/view?usp=sharing"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group flex items-center justify-center bg-white bg-opacity-10 hover:bg-opacity-20 text-white hover:text-purple-400 p-2 rounded-full transition-all duration-300 border border-gray-600 hover:border-purple-400"
+                  className="group flex items-center justify-center bg-white bg-opacity-10 hover:bg-opacity-20 text-white hover:text-gray-400 p-2 rounded-full transition-all duration-300 border border-gray-600 hover:border-gray-400"
                   title="View Letter of Recommendation"
                 >
                   <ExternalLink className="w-5 h-5 group-hover:scale-110 transition-transform" />
