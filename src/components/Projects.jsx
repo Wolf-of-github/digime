@@ -2,7 +2,8 @@ import React from 'react';
 import { Github, ExternalLink, Code, Cpu, Database, Zap, Star, Calendar } from 'lucide-react';
 
 // Placeholder images - replace with your actual imports
-import chipImage from '../assets/chip.png'
+import chipImage from '../assets/mlx.png'
+import airflow_aws from '../assets/airflow_aws.jpg'
 const symptomsftImage = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='200' viewBox='0 0 300 200'%3E%3Crect width='300' height='200' fill='%23f093fb'/%3E%3Ctext x='150' y='95' font-family='Arial, sans-serif' font-size='16' fill='white' text-anchor='middle'%3ESymptom%3C/text%3E%3Ctext x='150' y='115' font-family='Arial, sans-serif' font-size='16' fill='white' text-anchor='middle'%3ETracker%3C/text%3E%3C/svg%3E";
 // const chipImage = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='200' viewBox='0 0 300 200'%3E%3Crect width='300' height='200' fill='%234facfe'/%3E%3Ctext x='150' y='95' font-family='Arial, sans-serif' font-size='18' fill='white' text-anchor='middle'%3EApple%3C/text%3E%3Ctext x='150' y='115' font-family='Arial, sans-serif' font-size='18' fill='white' text-anchor='middle'%3ESilicon%3C/text%3E%3C/svg%3E";
 
@@ -16,7 +17,7 @@ export default function Projects() {
       image: chipImage,
       category: 'Machine Learning',
       status: 'Completed',
-      date: '2024',
+      date: '2025',
       highlights: [
         'On-device fine-tuning using Apple M2 Pro',
         'Parameter-efficient training with LoRA/QLoRA',
@@ -24,6 +25,24 @@ export default function Projects() {
         'Quantized 8B parameter model optimization'
       ]
     },
+    {
+      title: 'Mushroom Classification ML Pipeline',
+      tech: ['Apache Airflow', 'AWS Glue', 'Amazon SageMaker', 'XGBoost', 'Python', 'S3', 'CloudWatch'],
+      description: 'Robust Apache Airflow pipeline for processing mushroom dataset and training a binary classification model using AWS Glue ETL and SageMaker. Features intelligent conditional processing that prevents unnecessary reprocessing and handles idempotent operations safely.',
+      github: 'https://github.com/Wolf-of-github/ML-Pipeline-Demo/tree/main',
+      image: airflow_aws,
+      category: 'Machine Learning',
+      status: 'Completed',
+      date: '2025',
+      highlights: [
+        'Intelligent processing that skips completed steps automatically',
+        'Fixed version addressing common task skipping issues in ML pipelines',
+        'End-to-end AWS integration with Glue ETL and SageMaker training',
+        'XGBoost binary classification for edible vs poisonous mushroom prediction',
+        'Comprehensive monitoring with CloudWatch logging and metrics',
+        'Idempotent design allowing safe pipeline re-execution'
+      ]
+    }
     // {
     //   title: 'Coming Soon - More Projects',
     //   tech: ['React', 'Node.js', 'Python', 'TensorFlow'],

@@ -16,7 +16,8 @@ const skillsData = [
     color: 'from-blue-400 to-blue-600',
     skills: [
       { name: 'Docker', level: 85 },
-      { name: 'Kubernetes', level: 80 }
+      { name: 'Kubernetes', level: 80 },
+      {name: 'Apache Airflow', level: 80}
     ]
   },
   {
