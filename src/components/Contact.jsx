@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react';
 import emailjs from '@emailjs/browser';
-import { Send, Mail, User, MessageCircle, MapPin, Phone, Linkedin, Github, CheckCircle, AlertCircle, Clock } from 'lucide-react';
+import { Send, Mail, User, MessageCircle, MapPin, Phone, Linkedin, Github, CheckCircle, AlertCircle, Clock, Video } from 'lucide-react';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -109,7 +109,7 @@ const Contact = () => {
               </div>
 
               {/* Response Time Card */}
-              <div className="bg-white bg-opacity-10 text-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:bg-opacity-15 group">
+              {/* <div className="bg-white bg-opacity-10 text-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:bg-opacity-15 group">
                 <div className="flex items-center gap-4">
                   <div className="p-3 bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-400/30 text-purple-200 rounded-lg group-hover:scale-110 transition-transform duration-300">
                     <Clock className="w-5 h-5" />
@@ -119,7 +119,7 @@ const Contact = () => {
                     <p className="text-gray-300 font-mono text-sm">Within 24 hours</p>
                   </div>
                 </div>
-              </div>
+              </div> */}
             </div>
 
             {/* Social Links */}
@@ -130,14 +130,14 @@ const Contact = () => {
               </h3>
               <div className="space-y-3">
                 <a 
-                  href="https://linkedin.com/in/yourprofile" 
+                  href="https://www.linkedin.com/in/ishaan-apte-839619212/" target='blank'
                   className="flex items-center gap-3 text-gray-300 hover:text-white font-mono text-sm transition-colors duration-200 group"
                 >
                   <Linkedin className="w-4 h-4 group-hover:scale-110 transition-transform" />
                   LinkedIn Profile
                 </a>
                 <a 
-                  href="https://github.com/yourusername" 
+                  href="https://github.com/Wolf-of-github" target='blank'
                   className="flex items-center gap-3 text-gray-300 hover:text-white font-mono text-sm transition-colors duration-200 group"
                 >
                   <Github className="w-4 h-4 group-hover:scale-110 transition-transform" />
@@ -264,30 +264,26 @@ const Contact = () => {
           </div>
         </div>
 
+        {/* OR Separator */}
+        <div className="flex items-center justify-center my-12">
+          <div className="flex-1 h-px bg-gradient-to-r from-transparent via-gray-600 to-transparent"></div>
+          <span className="px-6 text-gray-400 font-mono font-bold text-lg">OR</span>
+          <div className="flex-1 h-px bg-gradient-to-r from-transparent via-gray-600 to-transparent"></div>
+        </div>
+
         {/* Call to Action */}
-        <div className="mt-16 text-center">
+        <div className="text-center">
           <div className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 border border-blue-400/20 rounded-xl p-8">
             <h3 className="text-2xl font-bold text-white font-mono mb-4">
-              Ready to Start a Project?
+              Schedule a Google-Meet via Calendly
             </h3>
-            <p className="text-gray-300 font-mono mb-6 max-w-2xl mx-auto">
-              Whether you have a clear vision or just an idea, I'm here to help bring it to life. 
-              Let's discuss your project and see how we can work together.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="mailto:iapte@usc.edu"
-                className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-3 rounded-lg font-mono font-medium hover:from-blue-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105"
-              >
-                <Mail className="w-5 h-5" />
-                Quick Email
-              </a>
+            <div className="flex justify-center">
               <a
                 href="https://calendly.com/iapte-usc/30min" target='blank'
-                className="inline-flex items-center gap-2 border border-gray-600 text-gray-300 px-6 py-3 rounded-lg font-mono font-medium hover:border-gray-500 hover:text-white transition-all duration-200"
+                className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-3 rounded-lg font-mono font-medium hover:from-blue-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105"
               >
-                <Phone className="w-5 h-5" />
-                Schedule Call
+                <Video className="w-5 h-5" />
+                Schedule Meet
               </a>
             </div>
           </div>

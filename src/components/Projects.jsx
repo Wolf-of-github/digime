@@ -227,7 +227,7 @@ export default function Projects() {
         </div>
       </div>
 
-      {/* Call to Action */}
+      {/* Call to Action
       <div className="text-center mt-16">
         <div className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 border border-blue-400/20 rounded-xl p-8">
           <h3 className="text-2xl font-bold text-white font-mono mb-4">
@@ -246,7 +246,7 @@ export default function Projects() {
             Follow on GitHub
           </a>
         </div>
-      </div>
+      </div> */}
     </section>
   );
 }

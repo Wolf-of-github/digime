@@ -15,10 +15,9 @@ export default function AboutMe() {
 
           <div className="bg-white bg-opacity-10 rounded-xl p-6 mt-8 shadow-lg">
             <div className="text-lg sm:text-xl text-gray-100 font-mono text-justify leading-relaxed">
-            Hi! I'm a graduate student focused on building reliable, scalable, and efficient AI-powered applications. 
-            My work centers around fine-tuning large language models, implementing retrieval-augmented generation (RAG), 
-            and leveraging cloud computing, particularly AWS to streamline AI/ML development. 
-            I'm especially interested in distributed machine learning using Kubernetes, with the goal of accelerating model training and optimizing resource efficiency.
+              I am a computer science graduate student with expertise in engineering efficient backend systems, enabling AI automation and
+              cloud deployment at scale. Drawing by my industry experience and project work, I bring a keen understanding of product
+              development and the ability to recognize user expectations and build solutions that align with them.
             </div>
           </div>
         </div>

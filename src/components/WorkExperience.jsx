@@ -3,8 +3,26 @@ import { ExternalLink, Calendar, Building, Award, MapPin } from 'lucide-react';
 
 // Placeholder for company logo - replace with your actual import
 import credenceLogo from '../assets/credencelogonew.png'
+import nslogo from '../assets/neuralseek.jpg'
+// import neuralseekLogo from '../assets/neuralseek-logo.png' // Add your logo here
 
 const experiences = [
+  {
+    role: 'AI Engineering Intern',
+    company: 'NeuralSeek', // Update with actual company name
+    duration: 'Jun 2024 – Jul 2024', // Update with actual dates
+    period: '6 weeks',
+    location: 'Miami (Remote)', // Update with actual location
+    description: "Completed an intensive AI engineering internship focused on building no-code agentic AI workflows and configuring RAG (Retrieval-Augmented Generation) pipelines. Applied ethical AI practices throughout the development process to ensure responsible AI implementation. Delivered a functional multi-agent automation solution showcasing advanced workflow orchestration. Built an automated resume-optimization agent using NeuralSeek's mAIstro platform, leveraging LLM-driven retrieval and intelligent workflow orchestration to align user resumes with job descriptions, improving application success rates through AI-powered content optimization.",
+    technologies: ['LLMs', 'RAG Pipelines', 'mAIstro Platform', 'Multi-Agent Systems', 'Workflow Orchestration', 'NLP', 'Ethical AI'],
+    achievements: [
+      'Built automated resume-optimization agent with LLM-driven retrieval',
+      'Configured and deployed RAG pipelines for intelligent content generation',
+      'Delivered functional multi-agent automation solution',
+      'Applied ethical AI practices across all development stages'
+    ],
+    image: nslogo,
+  },
   {
     role: 'Software Developer Intern',
     company: 'Credence Analytics Pvt. Ltd.',
