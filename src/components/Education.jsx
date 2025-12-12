@@ -7,7 +7,7 @@ import ruparelLogo from '../assets/dg.jpg'
 
 const educationData = [
   {
-    institution: 'University of Southern California',
+    institution: 'University of Southern California!',
     logo: uscLogo,
     degree: 'M.S. in Computer Science',
     duration: '2024 – 2026',
