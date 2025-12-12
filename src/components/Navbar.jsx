@@ -21,7 +21,7 @@ export default function Navbar() {
         {/* Left: Name */}
         <div className="flex items-center justify-center sm:justify-start w-full sm:w-auto">
           <a href="/" className="text-2xl sm:text-3xl font-mono font-bold hover:cursor-pointer group transition-all duration-300">
-            <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent group-hover:from-blue-300 group-hover:to-purple-400 transition-all duration-300">
+            <span className="">
               Ishaan Apte
             </span>
           </a>
