@@ -28,7 +28,7 @@ const Footer = () => {
   }, []);
 
   return (
-    <footer className="bg-gray-800/50 border-t border-gray-700/50 text-white py-8 px-6 w-full flex-shrink-0 mt-auto">
+    <footer className="bg-gray-200/80 border-t border-gray-300/50 text-gray-900 py-8 px-6 w-full flex-shrink-0 mt-auto">
       <div className="max-w-7xl mx-auto">
         
         {/* Main Footer Content */}
@@ -36,31 +36,31 @@ const Footer = () => {
           
           {/* Copyright and Message */}
           <div className="text-center lg:text-left">
-            <p className="text-lg font-mono text-gray-200 mb-2">
-              <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent font-bold">
+            <p className="text-lg font-mono text-gray-900 mb-2">
+              <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent font-bold">
                 ©2025 Ishaan Apte
               </span>
             </p>
-            <p className="text-sm text-gray-300 font-mono flex items-center justify-center lg:justify-start gap-2">
-              <Heart className="w-4 h-4 text-red-400 animate-pulse" />
+            <p className="text-sm text-gray-700 font-mono flex items-center justify-center lg:justify-start gap-2">
+              <Heart className="w-4 h-4 text-red-500 animate-pulse" />
               Grateful for the journey. Thank you for visiting!
             </p>
           </div>
 
           {/* Visitor Counter */}
-          <div className="bg-white bg-opacity-10 rounded-lg px-6 py-3 hover:bg-opacity-15 transition-all duration-300 shadow-lg">
+          <div className="bg-white/60 rounded-lg px-6 py-3 hover:bg-white/80 transition-all duration-300 shadow-lg border border-gray-300">
             <div className="flex items-center gap-3">
-              <div className="p-2 bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-400/30 text-blue-200 rounded-lg">
+              <div className="p-2 bg-gradient-to-r from-blue-100 to-purple-100 border border-blue-300 text-blue-700 rounded-lg">
                 <Eye className="w-4 h-4" />
               </div>
               <div>
-                <div className="text-sm text-gray-400 font-mono">Total Visitors</div>
-                <div className="text-xl font-bold text-white font-mono">
+                <div className="text-sm text-gray-600 font-mono">Total Visitors</div>
+                <div className="text-xl font-bold text-gray-900 font-mono">
                   {visitorCount !== null ? visitorCount.toLocaleString() : (
                     <div className="flex items-center gap-1">
-                      <div className="w-2 h-2 bg-blue-400 rounded-full animate-bounce" style={{ animationDelay: '0ms' }}></div>
-                      <div className="w-2 h-2 bg-purple-400 rounded-full animate-bounce" style={{ animationDelay: '150ms' }}></div>
-                      <div className="w-2 h-2 bg-blue-400 rounded-full animate-bounce" style={{ animationDelay: '300ms' }}></div>
+                      <div className="w-2 h-2 bg-blue-600 rounded-full animate-bounce" style={{ animationDelay: '0ms' }}></div>
+                      <div className="w-2 h-2 bg-purple-600 rounded-full animate-bounce" style={{ animationDelay: '150ms' }}></div>
+                      <div className="w-2 h-2 bg-blue-600 rounded-full animate-bounce" style={{ animationDelay: '300ms' }}></div>
                     </div>
                   )}
                 </div>
@@ -70,13 +70,13 @@ const Footer = () => {
         </div>
 
         {/* Divider */}
-        <div className="w-full h-px bg-gradient-to-r from-transparent via-gray-600 to-transparent mb-6"></div>
+        <div className="w-full h-px bg-gradient-to-r from-transparent via-gray-400 to-transparent mb-6"></div>
 
         {/* Bottom Section */}
         <div className="text-center">
-          <p className="text-xs text-gray-400 font-mono">
+          <p className="text-xs text-gray-600 font-mono">
             Built with{' '}
-            <span className="text-red-400">♥</span>{' '}
+            <span className="text-red-500">♥</span>{' '}
             using React & Tailwind CSS
           </p>
         </div>

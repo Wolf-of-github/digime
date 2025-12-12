@@ -56,9 +56,9 @@ const skillsData = [
 
 // Proficiency badge styling
 const proficiencyStyles = {
-  'Expert': 'bg-gradient-to-r from-purple-500/20 to-pink-500/20 border-purple-400/40 text-purple-200',
-  'Advanced': 'bg-gradient-to-r from-blue-500/20 to-cyan-500/20 border-blue-400/40 text-blue-200',
-  'Intermediate': 'bg-gradient-to-r from-green-500/20 to-emerald-500/20 border-green-400/40 text-green-200'
+  'Expert': 'bg-purple-100 border-purple-400 text-purple-700',
+  'Advanced': 'bg-blue-100 border-blue-400 text-blue-700',
+  'Intermediate': 'bg-green-100 border-green-400 text-green-700'
 };
 
 export default function Skills() {
@@ -66,11 +66,11 @@ export default function Skills() {
     <section className="mt-20">
       {/* Section Header */}
       <div className="text-center mb-12">
-        <h2 className="text-4xl font-bold text-gray-100 font-mono mb-4">
+        <h2 className="text-4xl font-bold text-gray-900 font-mono mb-4">
           Technical Skills
         </h2>
-        <div className="w-24 h-1 bg-gradient-to-r from-blue-400 to-purple-500 mx-auto mb-4"></div>
-        <p className="text-gray-300 font-mono text-sm max-w-2xl mx-auto">
+        <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto mb-4"></div>
+        <p className="text-gray-700 font-mono text-sm max-w-2xl mx-auto">
           A comprehensive overview of my technical expertise across various domains
         </p>
       </div>
@@ -80,15 +80,15 @@ export default function Skills() {
         {skillsData.map((category, categoryIndex) => (
           <div
             key={categoryIndex}
-            className="bg-white bg-opacity-10 text-white rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 hover:bg-opacity-15 group border border-gray-700/50"
+            className="bg-white/80 border border-gray-200 text-gray-900 rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 group"
           >
 
             {/* Category Header */}
-            <div className="flex items-center gap-3 mb-6 pb-4 border-b border-gray-600/30">
+            <div className="flex items-center gap-3 mb-6 pb-4 border-b border-gray-300">
               <div className={`p-3 bg-gradient-to-r ${category.color} bg-opacity-20 border ${category.borderColor} rounded-lg group-hover:scale-110 transition-transform duration-300`}>
                 {category.icon}
               </div>
-              <h3 className="text-lg font-bold text-white font-mono">
+              <h3 className="text-lg font-bold text-gray-900 font-mono">
                 {category.category}
               </h3>
             </div>
@@ -98,11 +98,11 @@ export default function Skills() {
               {category.skills.map((skill, skillIndex) => (
                 <div
                   key={skillIndex}
-                  className="group/skill bg-gray-700/30 hover:bg-gray-600/40 rounded-lg p-3 transition-all duration-200 border border-gray-600/20 hover:border-gray-500/40"
+                  className="group/skill bg-gray-100 hover:bg-gray-200 rounded-lg p-3 transition-all duration-200 border border-gray-300 hover:border-gray-400"
                 >
                   {/* Skill Name and Proficiency */}
                   <div className="flex items-center justify-between">
-                    <span className="text-gray-100 font-mono text-sm font-semibold">
+                    <span className="text-gray-900 font-mono text-sm font-semibold">
                       {skill.name}
                     </span>
                     <span className={`text-xs font-mono px-2 py-1 rounded-md border ${proficiencyStyles[skill.proficiency]}`}>
@@ -118,16 +118,16 @@ export default function Skills() {
 
       {/* Legend */}
       <div className="mt-12 flex flex-wrap justify-center gap-4">
-        <div className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-400/40 text-purple-200 px-4 py-2 rounded-lg font-mono text-xs">
-          <div className="w-2 h-2 bg-purple-400 rounded-full"></div>
+        <div className="inline-flex items-center gap-2 bg-purple-100 border border-purple-400 text-purple-700 px-4 py-2 rounded-lg font-mono text-xs">
+          <div className="w-2 h-2 bg-purple-600 rounded-full"></div>
           Expert: Extensive professional experience
         </div>
-        <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 border border-blue-400/40 text-blue-200 px-4 py-2 rounded-lg font-mono text-xs">
-          <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
+        <div className="inline-flex items-center gap-2 bg-blue-100 border border-blue-400 text-blue-700 px-4 py-2 rounded-lg font-mono text-xs">
+          <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
           Advanced: Strong hands-on experience
         </div>
-        <div className="inline-flex items-center gap-2 bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-400/40 text-green-200 px-4 py-2 rounded-lg font-mono text-xs">
-          <div className="w-2 h-2 bg-green-400 rounded-full"></div>
+        <div className="inline-flex items-center gap-2 bg-green-100 border border-green-400 text-green-700 px-4 py-2 rounded-lg font-mono text-xs">
+          <div className="w-2 h-2 bg-green-600 rounded-full"></div>
           Intermediate: Working knowledge
         </div>
       </div>

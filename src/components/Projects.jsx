@@ -65,11 +65,11 @@ export default function Projects() {
     <section id="projects" className="mt-20">
       {/* Section Header */}
       <div className="text-center mb-12">
-        <h2 className="text-4xl font-bold text-gray-100 font-mono mb-4">
+        <h2 className="text-4xl font-bold text-gray-900 font-mono mb-4">
           Projects
         </h2>
-        <div className="w-24 h-1 bg-gradient-to-r from-blue-400 to-purple-500 mx-auto"></div>
-        <p className="text-gray-300 font-mono mt-4 max-w-2xl mx-auto">
+        <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto"></div>
+        <p className="text-gray-700 font-mono mt-4 max-w-2xl mx-auto">
           A showcase of innovative solutions combining cutting-edge technologies with practical applications
         </p>
       </div>
@@ -77,18 +77,18 @@ export default function Projects() {
       {/* Projects Timeline */}
       <div className="relative">
         {/* Timeline line - hidden on mobile, visible on larger screens */}
-        <div className="hidden md:block absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-blue-400 to-purple-500"></div>
+        <div className="hidden md:block absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-blue-500 to-purple-600"></div>
         
         <div className="space-y-12">
           {projectList.map((project, index) => (
             <div key={index} className="relative">
               {/* Timeline dot */}
-              <div className="hidden md:block absolute left-6 w-5 h-5 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full border-4 border-gray-900 z-10">
+              <div className="hidden md:block absolute left-6 w-5 h-5 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full border-4 border-white z-10">
                 <div className="absolute inset-1 bg-white rounded-full opacity-50"></div>
               </div>
-              
+
               {/* Project Card */}
-              <div className="md:ml-20 bg-white bg-opacity-10 text-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:bg-opacity-15">
+              <div className="md:ml-20 bg-white/80 border border-gray-200 text-gray-900 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300">
                 
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-0">
                   
@@ -105,11 +105,11 @@ export default function Projects() {
                     <div className="absolute top-4 left-4">
                       <div className={`inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono font-medium border backdrop-blur-sm ${
                         project.status === 'Completed'
-                          ? 'bg-green-500/30 border-green-400/50 text-green-200'
-                          : 'bg-blue-500/30 border-blue-400/50 text-blue-200'
+                          ? 'bg-green-100 border-green-400 text-green-700'
+                          : 'bg-blue-100 border-blue-400 text-blue-700'
                       }`}>
                         <div className={`w-2 h-2 rounded-full ${
-                          project.status === 'Completed' ? 'bg-green-400' : 'bg-blue-400 animate-pulse'
+                          project.status === 'Completed' ? 'bg-green-600' : 'bg-blue-600 animate-pulse'
                         }`}></div>
                         {project.status}
                       </div>
@@ -117,7 +117,7 @@ export default function Projects() {
 
                     {/* Category Badge */}
                     <div className="absolute top-4 right-4">
-                      <div className="bg-gray-900/70 border border-gray-600/50 text-gray-300 px-3 py-1 rounded-full text-xs font-mono font-medium backdrop-blur-sm">
+                      <div className="bg-white/90 border border-gray-300 text-gray-700 px-3 py-1 rounded-full text-xs font-mono font-medium backdrop-blur-sm">
                         {project.category}
                       </div>
                     </div>
@@ -130,18 +130,18 @@ export default function Projects() {
                     <div className="mb-6">
                       <div className="flex items-start justify-between gap-4 mb-4">
                         <div className="flex-1">
-                          <h3 className="text-2xl lg:text-3xl font-bold text-white font-mono mb-3 leading-tight">
+                          <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 font-mono mb-3 leading-tight">
                             {project.title}
                           </h3>
-                          
+
                           <div className="flex items-center gap-4 mb-4">
                             <div className="flex items-center gap-2">
-                              <Calendar className="w-4 h-4 text-blue-400" />
-                              <span className="text-sm text-gray-400 font-mono">{project.date}</span>
+                              <Calendar className="w-4 h-4 text-blue-600" />
+                              <span className="text-sm text-gray-600 font-mono">{project.date}</span>
                             </div>
                             <div className="flex items-center gap-2">
-                              <Code className="w-4 h-4 text-purple-400" />
-                              <span className="text-sm text-gray-400 font-mono">{project.category}</span>
+                              <Code className="w-4 h-4 text-purple-600" />
+                              <span className="text-sm text-gray-600 font-mono">{project.category}</span>
                             </div>
                           </div>
                         </div>
@@ -153,7 +153,7 @@ export default function Projects() {
                               href={project.github}
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="group flex items-center justify-center bg-gray-700/50 hover:bg-gray-600/50 text-white p-3 rounded-lg transition-all duration-300 border border-gray-600/30 hover:border-gray-500/50 hover:scale-105"
+                              className="group flex items-center justify-center bg-gray-100 hover:bg-gray-200 text-gray-900 p-3 rounded-lg transition-all duration-300 border border-gray-300 hover:border-gray-400 hover:scale-105"
                               title="View on GitHub"
                             >
                               <Github className="w-5 h-5 group-hover:scale-110 transition-transform" />
@@ -161,7 +161,7 @@ export default function Projects() {
                           )}
                           <a
                             href="#"
-                            className="group flex items-center justify-center bg-gradient-to-r from-blue-500/20 to-purple-500/20 hover:from-blue-500/30 hover:to-purple-500/30 text-white p-3 rounded-lg transition-all duration-300 border border-blue-400/30 hover:border-blue-400/50 hover:scale-105"
+                            className="group flex items-center justify-center bg-gradient-to-r from-blue-100 to-purple-100 hover:from-blue-200 hover:to-purple-200 text-gray-900 p-3 rounded-lg transition-all duration-300 border border-blue-400 hover:border-blue-500 hover:scale-105"
                             title="View Demo"
                           >
                             <ExternalLink className="w-5 h-5 group-hover:scale-110 transition-transform" />
@@ -172,22 +172,22 @@ export default function Projects() {
 
                     {/* Description */}
                     <div className="mb-6">
-                      <p className="text-gray-200 leading-relaxed font-mono text-sm lg:text-base">
+                      <p className="text-gray-700 leading-relaxed font-mono text-sm lg:text-base">
                         {project.description}
                       </p>
                     </div>
 
                     {/* Technologies */}
                     <div className="mb-6">
-                      <h4 className="text-sm font-bold text-gray-300 font-mono mb-4 uppercase tracking-wider flex items-center gap-2">
-                        <Cpu className="w-4 h-4 text-blue-400" />
+                      <h4 className="text-sm font-bold text-gray-900 font-mono mb-4 uppercase tracking-wider flex items-center gap-2">
+                        <Cpu className="w-4 h-4 text-blue-600" />
                         Technologies & Tools
                       </h4>
                       <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
                         {project.tech.map((tech, techIndex) => (
                           <div
                             key={techIndex}
-                            className="group px-3 py-2 bg-gray-700/60 hover:bg-gray-600/60 text-gray-300 hover:text-white rounded-lg text-xs font-mono font-medium transition-all duration-200 text-center border border-gray-600/30 hover:border-gray-500/50"
+                            className="group px-3 py-2 bg-gray-100 hover:bg-gray-200 text-gray-700 hover:text-gray-900 rounded-lg text-xs font-mono font-medium transition-all duration-200 text-center border border-gray-300 hover:border-gray-400"
                           >
                             {tech}
                           </div>
@@ -197,15 +197,15 @@ export default function Projects() {
 
                     {/* Key Highlights */}
                     <div>
-                      <h4 className="text-sm font-bold text-gray-300 font-mono mb-4 uppercase tracking-wider flex items-center gap-2">
-                        <Star className="w-4 h-4 text-yellow-400" />
+                      <h4 className="text-sm font-bold text-gray-900 font-mono mb-4 uppercase tracking-wider flex items-center gap-2">
+                        <Star className="w-4 h-4 text-yellow-600" />
                         Key Highlights
                       </h4>
                       <div className="grid grid-cols-1 lg:grid-cols-2 gap-3">
                         {project.highlights.map((highlight, highlightIndex) => (
                           <div key={highlightIndex} className="flex items-start gap-3 group">
-                            <div className="w-2 h-2 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full mt-2 flex-shrink-0 group-hover:scale-125 transition-transform duration-200"></div>
-                            <span className="text-sm text-gray-300 font-mono leading-relaxed group-hover:text-gray-200 transition-colors duration-200">
+                            <div className="w-2 h-2 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full mt-2 flex-shrink-0 group-hover:scale-125 transition-transform duration-200"></div>
+                            <span className="text-sm text-gray-700 font-mono leading-relaxed group-hover:text-gray-900 transition-colors duration-200">
                               {highlight}
                             </span>
                           </div>
@@ -219,7 +219,7 @@ export default function Projects() {
               {/* Connector line for mobile */}
               {index < projectList.length - 1 && (
                 <div className="md:hidden flex justify-center mt-8">
-                  <div className="w-0.5 h-8 bg-gradient-to-b from-purple-400 to-blue-400"></div>
+                  <div className="w-0.5 h-8 bg-gradient-to-b from-purple-500 to-blue-500"></div>
                 </div>
               )}
             </div>

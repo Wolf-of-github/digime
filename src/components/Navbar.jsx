@@ -13,8 +13,8 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav className={`sticky top-0 z-50 text-white w-full py-4 px-6 sm:px-12 transition-all duration-300 ${
-      isScrolled ? 'bg-black/40 backdrop-blur-md shadow-md' : 'bg-transparent'
+    <nav className={`sticky top-0 z-50 text-gray-900 w-full py-4 px-6 sm:px-12 transition-all duration-300 ${
+      isScrolled ? 'bg-white/80 backdrop-blur-md shadow-md' : 'bg-transparent'
     }`}>
       <div className="max-w-7xl mx-auto flex flex-col sm:flex-row sm:justify-between items-center gap-4 sm:gap-0">
         
@@ -33,25 +33,25 @@ export default function Navbar() {
             href="https://github.com/Wolf-of-github"
             target="_blank"
             rel="noopener noreferrer"
-            className="group flex items-center gap-2 text-gray-300 hover:text-white transition-all duration-300 px-3 py-2 rounded-lg hover:bg-white/10"
+            className="group flex items-center gap-2 text-gray-700 hover:text-gray-900 transition-all duration-300 px-3 py-2 rounded-lg hover:bg-gray-200/50"
           >
             <Github className="w-4 h-4 group-hover:scale-110 transition-transform duration-200" />
             <span className="font-mono">GitHub</span>
           </a>
-          
+
           <a
             href="https://www.linkedin.com/in/ishaan-apte-839619212/"
             target="_blank"
             rel="noopener noreferrer"
-            className="group flex items-center gap-2 text-gray-300 hover:text-white transition-all duration-300 px-3 py-2 rounded-lg hover:bg-white/10"
+            className="group flex items-center gap-2 text-gray-700 hover:text-gray-900 transition-all duration-300 px-3 py-2 rounded-lg hover:bg-gray-200/50"
           >
             <Linkedin className="w-4 h-4 group-hover:scale-110 transition-transform duration-200" />
             <span className="font-mono">LinkedIn</span>
           </a>
-          
+
           <a
             href="#/blogs"
-            className="group flex items-center gap-2 text-gray-300 hover:text-white transition-all duration-300 px-3 py-2 rounded-lg hover:bg-white/10 font-bold"
+            className="group flex items-center gap-2 text-gray-700 hover:text-gray-900 transition-all duration-300 px-3 py-2 rounded-lg hover:bg-gray-200/50 font-bold"
           >
             <PenTool className="w-4 h-4 group-hover:scale-110 transition-transform duration-200" />
             <span className="font-mono">Blog</span>

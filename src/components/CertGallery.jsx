@@ -46,18 +46,18 @@ export default function CertGallery() {
   const [selectedCert, setSelectedCert] = useState(null);
 
   return (
-    <div className="text-gray-100 mt-20">
+    <div className="text-gray-900 mt-20">
       {/* Section Header */}
       <div className="text-center mb-12">
         <div className="inline-flex items-center gap-3 mb-4">
-          <Award className="w-8 h-8 text-blue-400" />
-          <h2 className="text-4xl font-bold text-gray-100 font-mono">
+          <Award className="w-8 h-8 text-blue-600" />
+          <h2 className="text-4xl font-bold text-gray-900 font-mono">
             Certifications
           </h2>
-          <Award className="w-8 h-8 text-purple-400" />
+          <Award className="w-8 h-8 text-purple-600" />
         </div>
-        <div className="w-24 h-1 bg-gradient-to-r from-blue-400 to-purple-500 mx-auto mb-4"></div>
-        <p className="text-gray-300 font-mono text-sm max-w-2xl mx-auto">
+        <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto mb-4"></div>
+        <p className="text-gray-700 font-mono text-sm max-w-2xl mx-auto">
           Professional certifications demonstrating expertise across various technical domains
         </p>
       </div>
@@ -80,7 +80,7 @@ export default function CertGallery() {
               </div>
             )}
 
-            <div className="bg-white bg-opacity-10 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:bg-opacity-15 border border-gray-700/50 hover:border-blue-400/50 h-full flex flex-col">
+            <div className="bg-white/80 border border-gray-200 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 h-full flex flex-col">
 
               {/* Certificate Image */}
               <div className="relative overflow-hidden bg-gradient-to-br from-gray-800 to-gray-900 p-6">
@@ -110,27 +110,27 @@ export default function CertGallery() {
               <div className="p-6 flex-1 flex flex-col">
                 {/* Category Badge */}
                 <div className="mb-4">
-                  <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-400/30 text-blue-200 px-3 py-1 rounded-full text-xs font-mono font-medium">
+                  <div className="inline-flex items-center gap-2 bg-blue-100 border border-blue-400 text-blue-700 px-3 py-1 rounded-full text-xs font-mono font-medium">
                     <Award className="w-3 h-3" />
                     {cert.category}
                   </div>
                 </div>
 
-                <h3 className="text-xl font-bold text-white font-mono mb-3 leading-tight group-hover:text-blue-300 transition-colors duration-300">
+                <h3 className="text-xl font-bold text-gray-900 font-mono mb-3 leading-tight group-hover:text-blue-700 transition-colors duration-300">
                   {cert.title}
                 </h3>
 
                 <div className="space-y-2 mb-4">
                   <div className="flex items-center gap-2">
-                    <Building className="w-4 h-4 text-blue-400 flex-shrink-0" />
-                    <span className="text-gray-300 font-mono text-sm">
+                    <Building className="w-4 h-4 text-blue-600 flex-shrink-0" />
+                    <span className="text-gray-700 font-mono text-sm">
                       {cert.issuer}
                     </span>
                   </div>
 
                   <div className="flex items-center gap-2">
-                    <Calendar className="w-4 h-4 text-purple-400 flex-shrink-0" />
-                    <span className="text-gray-400 font-mono text-sm">
+                    <Calendar className="w-4 h-4 text-purple-600 flex-shrink-0" />
+                    <span className="text-gray-600 font-mono text-sm">
                       {cert.date}
                     </span>
                   </div>
@@ -142,13 +142,13 @@ export default function CertGallery() {
                     {cert.skills.slice(0, 3).map((skill, idx) => (
                       <span
                         key={idx}
-                        className="text-xs bg-gray-700/50 text-gray-300 px-2 py-1 rounded font-mono border border-gray-600/30"
+                        className="text-xs bg-gray-100 text-gray-700 px-2 py-1 rounded font-mono border border-gray-300"
                       >
                         {skill}
                       </span>
                     ))}
                     {cert.skills.length > 3 && (
-                      <span className="text-xs bg-gray-700/50 text-gray-400 px-2 py-1 rounded font-mono border border-gray-600/30">
+                      <span className="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded font-mono border border-gray-300">
                         +{cert.skills.length - 3}
                       </span>
                     )}
@@ -157,7 +157,7 @@ export default function CertGallery() {
               </div>
 
               {/* Bottom Accent Bar */}
-              <div className="h-1 bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+              <div className="h-1 bg-gradient-to-r from-blue-500 via-purple-600 to-pink-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
             </div>
           </div>
         ))}
@@ -166,28 +166,28 @@ export default function CertGallery() {
       {/* Stats Section */}
       <div className="mt-16 flex flex-wrap justify-center gap-8">
         <div className="text-center">
-          <div className="text-4xl font-bold text-white font-mono mb-2 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+          <div className="text-4xl font-bold text-gray-900 font-mono mb-2 bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">
             {certificates.length}
           </div>
-          <div className="text-gray-400 font-mono text-sm">
+          <div className="text-gray-600 font-mono text-sm">
             Total Certifications
           </div>
         </div>
-        <div className="w-px h-16 bg-gray-700"></div>
+        <div className="w-px h-16 bg-gray-400"></div>
         <div className="text-center">
-          <div className="text-4xl font-bold text-white font-mono mb-2 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+          <div className="text-4xl font-bold text-gray-900 font-mono mb-2 bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">
             {new Set(certificates.map(c => c.category)).size}
           </div>
-          <div className="text-gray-400 font-mono text-sm">
+          <div className="text-gray-600 font-mono text-sm">
             Categories
           </div>
         </div>
-        <div className="w-px h-16 bg-gray-700"></div>
+        <div className="w-px h-16 bg-gray-400"></div>
         <div className="text-center">
-          <div className="text-4xl font-bold text-white font-mono mb-2 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+          <div className="text-4xl font-bold text-gray-900 font-mono mb-2 bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">
             {new Set(certificates.map(c => c.issuer)).size}
           </div>
-          <div className="text-gray-400 font-mono text-sm">
+          <div className="text-gray-600 font-mono text-sm">
             Issuers
           </div>
         </div>
@@ -205,10 +205,10 @@ export default function CertGallery() {
           >
 
             {/* Modal Header */}
-            <div className="sticky top-0 z-10 bg-gray-900/95 backdrop-blur-sm flex items-center justify-between p-6 border-b border-gray-700">
+            <div className="sticky top-0 z-10 bg-white/95 backdrop-blur-sm flex items-center justify-between p-6 border-b border-gray-300">
               <div className="flex-1">
                 <div className="flex items-center gap-3 mb-2">
-                  <h3 className="text-2xl lg:text-3xl font-bold text-white font-mono">
+                  <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 font-mono">
                     {selectedCert.title}
                   </h3>
                   {selectedCert.featured && (
@@ -220,18 +220,18 @@ export default function CertGallery() {
                 </div>
                 <div className="flex flex-wrap items-center gap-4">
                   <div className="flex items-center gap-2">
-                    <Building className="w-4 h-4 text-blue-400" />
-                    <span className="text-gray-300 font-mono text-sm">
+                    <Building className="w-4 h-4 text-blue-600" />
+                    <span className="text-gray-700 font-mono text-sm">
                       {selectedCert.issuer}
                     </span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <Calendar className="w-4 h-4 text-purple-400" />
-                    <span className="text-gray-400 font-mono text-sm">
+                    <Calendar className="w-4 h-4 text-purple-600" />
+                    <span className="text-gray-600 font-mono text-sm">
                       {selectedCert.date}
                     </span>
                   </div>
-                  <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-400/30 text-blue-200 px-3 py-1 rounded-full text-xs font-mono font-medium">
+                  <div className="inline-flex items-center gap-2 bg-blue-100 border border-blue-400 text-blue-700 px-3 py-1 rounded-full text-xs font-mono font-medium">
                     <Award className="w-3 h-3" />
                     {selectedCert.category}
                   </div>
@@ -239,7 +239,7 @@ export default function CertGallery() {
               </div>
 
               <button
-                className="text-gray-400 hover:text-white p-2 rounded-lg hover:bg-gray-800 transition-all duration-200 ml-4"
+                className="text-gray-600 hover:text-gray-900 p-2 rounded-lg hover:bg-gray-200 transition-all duration-200 ml-4"
                 onClick={() => setSelectedCert(null)}
               >
                 <X className="w-6 h-6" />
@@ -249,7 +249,7 @@ export default function CertGallery() {
             {/* Modal Content */}
             <div className="p-6 lg:p-8">
               {/* Certificate Image */}
-              <div className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl p-8 mb-6 border border-gray-700">
+              <div className="bg-gradient-to-br from-gray-100 to-gray-200 rounded-xl p-8 mb-6 border border-gray-300">
                 <img
                   src={selectedCert.image}
                   alt={selectedCert.title}
@@ -260,32 +260,32 @@ export default function CertGallery() {
               {/* Certificate Details Grid */}
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
                 {/* Description */}
-                <div className="bg-white/5 rounded-xl p-6 border border-gray-700/50">
-                  <h4 className="text-lg font-bold text-white font-mono mb-3 flex items-center gap-2">
-                    <CheckCircle className="w-5 h-5 text-green-400" />
+                <div className="bg-white/80 rounded-xl p-6 border border-gray-300">
+                  <h4 className="text-lg font-bold text-gray-900 font-mono mb-3 flex items-center gap-2">
+                    <CheckCircle className="w-5 h-5 text-green-600" />
                     Description
                   </h4>
-                  <p className="text-gray-300 font-mono text-sm leading-relaxed">
+                  <p className="text-gray-700 font-mono text-sm leading-relaxed">
                     {selectedCert.description}
                   </p>
                 </div>
 
                 {/* Credential Info */}
-                <div className="bg-white/5 rounded-xl p-6 border border-gray-700/50">
-                  <h4 className="text-lg font-bold text-white font-mono mb-3">
+                <div className="bg-white/80 rounded-xl p-6 border border-gray-300">
+                  <h4 className="text-lg font-bold text-gray-900 font-mono mb-3">
                     Credential Information
                   </h4>
                   <div className="space-y-3">
                     <div>
-                      <div className="text-gray-400 font-mono text-xs mb-1">Credential ID</div>
-                      <div className="text-gray-200 font-mono text-sm bg-gray-800/50 px-3 py-2 rounded border border-gray-700/50">
+                      <div className="text-gray-600 font-mono text-xs mb-1">Credential ID</div>
+                      <div className="text-gray-900 font-mono text-sm bg-gray-100 px-3 py-2 rounded border border-gray-300">
                         {selectedCert.credentialId}
                       </div>
                     </div>
                     <div>
-                      <div className="text-gray-400 font-mono text-xs mb-1">Issue Date</div>
-                      <div className="text-gray-200 font-mono text-sm bg-gray-800/50 px-3 py-2 rounded border border-gray-700/50 flex items-center gap-2">
-                        <Calendar className="w-4 h-4 text-purple-400" />
+                      <div className="text-gray-600 font-mono text-xs mb-1">Issue Date</div>
+                      <div className="text-gray-900 font-mono text-sm bg-gray-100 px-3 py-2 rounded border border-gray-300 flex items-center gap-2">
+                        <Calendar className="w-4 h-4 text-purple-600" />
                         {selectedCert.date}
                       </div>
                     </div>
@@ -294,15 +294,15 @@ export default function CertGallery() {
               </div>
 
               {/* Skills */}
-              <div className="bg-white/5 rounded-xl p-6 border border-gray-700/50">
-                <h4 className="text-lg font-bold text-white font-mono mb-4">
+              <div className="bg-white/80 rounded-xl p-6 border border-gray-300">
+                <h4 className="text-lg font-bold text-gray-900 font-mono mb-4">
                   Skills Demonstrated
                 </h4>
                 <div className="flex flex-wrap gap-3">
                   {selectedCert.skills.map((skill, idx) => (
                     <span
                       key={idx}
-                      className="bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-400/30 text-blue-200 px-4 py-2 rounded-lg text-sm font-mono font-medium"
+                      className="bg-blue-100 border border-blue-400 text-blue-700 px-4 py-2 rounded-lg text-sm font-mono font-medium"
                     >
                       {skill}
                     </span>

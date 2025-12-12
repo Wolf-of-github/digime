@@ -59,11 +59,11 @@ const Contact = () => {
     <section className="mt-20 mb-20">
       {/* Section Header */}
       <div className="text-center mb-12">
-        <h2 className="text-4xl font-bold text-gray-100 font-mono mb-4">
+        <h2 className="text-4xl font-bold text-gray-900 font-mono mb-4">
           Get In Touch
         </h2>
-        <div className="w-24 h-1 bg-gradient-to-r from-blue-400 to-purple-500 mx-auto"></div>
-        <p className="text-gray-300 font-mono mt-4 max-w-2xl mx-auto">
+        <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto"></div>
+        <p className="text-gray-700 font-mono mt-4 max-w-2xl mx-auto">
           Have a project in mind or want to collaborate? I'd love to hear from you.
         </p>
       </div>
@@ -78,16 +78,16 @@ const Contact = () => {
             <div className="space-y-6">
               
               {/* Email Card */}
-              <div className="bg-white bg-opacity-10 text-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:bg-opacity-15 group">
+              <div className="bg-white/80 border border-gray-200 text-gray-900 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 group">
                 <div className="flex items-center gap-4">
-                  <div className="p-3 bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-400/30 text-blue-200 rounded-lg group-hover:scale-110 transition-transform duration-300">
+                  <div className="p-3 bg-gradient-to-r from-blue-100 to-purple-100 border border-blue-400 text-blue-600 rounded-lg group-hover:scale-110 transition-transform duration-300">
                     <Mail className="w-5 h-5" />
                   </div>
                   <div>
-                    <h3 className="font-bold text-white font-mono text-lg mb-1">Email</h3>
-                    <a 
-                      href="mailto:iapte@usc.edu" 
-                      className="text-gray-300 hover:text-white font-mono text-sm transition-colors duration-200"
+                    <h3 className="font-bold text-gray-900 font-mono text-lg mb-1">Email</h3>
+                    <a
+                      href="mailto:iapte@usc.edu"
+                      className="text-gray-700 hover:text-gray-900 font-mono text-sm transition-colors duration-200"
                     >
                       iapte@usc.edu
                     </a>
@@ -96,14 +96,14 @@ const Contact = () => {
               </div>
 
               {/* Location Card */}
-              <div className="bg-white bg-opacity-10 text-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:bg-opacity-15 group">
+              <div className="bg-white/80 border border-gray-200 text-gray-900 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 group">
                 <div className="flex items-center gap-4">
-                  <div className="p-3 bg-gradient-to-r from-green-500/20 to-blue-500/20 border border-green-400/30 text-green-200 rounded-lg group-hover:scale-110 transition-transform duration-300">
+                  <div className="p-3 bg-gradient-to-r from-green-100 to-blue-100 border border-green-400 text-green-600 rounded-lg group-hover:scale-110 transition-transform duration-300">
                     <MapPin className="w-5 h-5" />
                   </div>
                   <div>
-                    <h3 className="font-bold text-white font-mono text-lg mb-1">Location</h3>
-                    <p className="text-gray-300 font-mono text-sm">Los Angeles, CA</p>
+                    <h3 className="font-bold text-gray-900 font-mono text-lg mb-1">Location</h3>
+                    <p className="text-gray-700 font-mono text-sm">Los Angeles, CA</p>
                   </div>
                 </div>
               </div>
@@ -123,22 +123,22 @@ const Contact = () => {
             </div>
 
             {/* Social Links */}
-            <div className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 border border-blue-400/20 rounded-xl p-6">
-              <h3 className="font-bold text-white font-mono text-lg mb-4 flex items-center gap-2">
-                <div className="w-1 h-4 bg-gradient-to-b from-blue-400 to-purple-500 rounded-full"></div>
+            <div className="bg-gradient-to-r from-blue-100 to-purple-100 border border-blue-400 rounded-xl p-6">
+              <h3 className="font-bold text-gray-900 font-mono text-lg mb-4 flex items-center gap-2">
+                <div className="w-1 h-4 bg-gradient-to-b from-blue-500 to-purple-600 rounded-full"></div>
                 Let's Connect
               </h3>
               <div className="space-y-3">
-                <a 
+                <a
                   href="https://www.linkedin.com/in/ishaan-apte-839619212/" target='blank'
-                  className="flex items-center gap-3 text-gray-300 hover:text-white font-mono text-sm transition-colors duration-200 group"
+                  className="flex items-center gap-3 text-gray-700 hover:text-gray-900 font-mono text-sm transition-colors duration-200 group"
                 >
                   <Linkedin className="w-4 h-4 group-hover:scale-110 transition-transform" />
                   LinkedIn Profile
                 </a>
-                <a 
+                <a
                   href="https://github.com/Wolf-of-github" target='blank'
-                  className="flex items-center gap-3 text-gray-300 hover:text-white font-mono text-sm transition-colors duration-200 group"
+                  className="flex items-center gap-3 text-gray-700 hover:text-gray-900 font-mono text-sm transition-colors duration-200 group"
                 >
                   <Github className="w-4 h-4 group-hover:scale-110 transition-transform" />
                   GitHub Profile
@@ -149,14 +149,14 @@ const Contact = () => {
 
           {/* Contact Form */}
           <div className="lg:col-span-3">
-            <div className="bg-white bg-opacity-10 text-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:bg-opacity-15">
-              
+            <div className="bg-white/80 border border-gray-200 text-gray-900 rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
+
               {/* Form Header */}
               <div className="mb-8">
-                <h3 className="text-2xl font-bold text-white font-mono mb-2">
+                <h3 className="text-2xl font-bold text-gray-900 font-mono mb-2">
                   Send a Message
                 </h3>
-                <p className="text-gray-300 font-mono text-sm">
+                <p className="text-gray-700 font-mono text-sm">
                   Fill out the information below and I'll get back to you as soon as possible.
                 </p>
               </div>
@@ -167,7 +167,7 @@ const Contact = () => {
                 {/* Name and Email Row */}
                 <div className="grid md:grid-cols-2 gap-6">
                   <div className="relative group">
-                    <User className="absolute left-3 top-3.5 w-5 h-5 text-gray-400 group-hover:text-gray-300 transition-colors" />
+                    <User className="absolute left-3 top-3.5 w-5 h-5 text-gray-600 group-hover:text-gray-700 transition-colors" />
                     <input
                       type="text"
                       name="user_name"
@@ -175,11 +175,11 @@ const Contact = () => {
                       onChange={handleInputChange}
                       required
                       placeholder="Your Name"
-                      className="w-full pl-12 pr-4 py-3.5 bg-gray-700/50 border border-gray-600/30 rounded-lg text-white placeholder-gray-400 font-mono focus:outline-none focus:border-blue-400/50 focus:bg-gray-600/50 hover:bg-gray-600/30 transition-all duration-300"
+                      className="w-full pl-12 pr-4 py-3.5 bg-gray-100 border border-gray-300 rounded-lg text-gray-900 placeholder-gray-600 font-mono focus:outline-none focus:border-blue-400 focus:bg-gray-200 hover:bg-gray-200 transition-all duration-300"
                     />
                   </div>
                   <div className="relative group">
-                    <Mail className="absolute left-3 top-3.5 w-5 h-5 text-gray-400 group-hover:text-gray-300 transition-colors" />
+                    <Mail className="absolute left-3 top-3.5 w-5 h-5 text-gray-600 group-hover:text-gray-700 transition-colors" />
                     <input
                       type="email"
                       name="user_email"
@@ -187,14 +187,14 @@ const Contact = () => {
                       onChange={handleInputChange}
                       required
                       placeholder="Your Email"
-                      className="w-full pl-12 pr-4 py-3.5 bg-gray-700/50 border border-gray-600/30 rounded-lg text-white placeholder-gray-400 font-mono focus:outline-none focus:border-blue-400/50 focus:bg-gray-600/50 hover:bg-gray-600/30 transition-all duration-300"
+                      className="w-full pl-12 pr-4 py-3.5 bg-gray-100 border border-gray-300 rounded-lg text-gray-900 placeholder-gray-600 font-mono focus:outline-none focus:border-blue-400 focus:bg-gray-200 hover:bg-gray-200 transition-all duration-300"
                     />
                   </div>
                 </div>
 
                 {/* Subject */}
                 <div className="relative group">
-                  <MessageCircle className="absolute left-3 top-3.5 w-5 h-5 text-gray-400 group-hover:text-gray-300 transition-colors" />
+                  <MessageCircle className="absolute left-3 top-3.5 w-5 h-5 text-gray-600 group-hover:text-gray-700 transition-colors" />
                   <input
                     type="text"
                     name="subject"
@@ -202,7 +202,7 @@ const Contact = () => {
                     onChange={handleInputChange}
                     required
                     placeholder="Subject"
-                    className="w-full pl-12 pr-4 py-3.5 bg-gray-700/50 border border-gray-600/30 rounded-lg text-white placeholder-gray-400 font-mono focus:outline-none focus:border-blue-400/50 focus:bg-gray-600/50 hover:bg-gray-600/30 transition-all duration-300"
+                    className="w-full pl-12 pr-4 py-3.5 bg-gray-100 border border-gray-300 rounded-lg text-gray-900 placeholder-gray-600 font-mono focus:outline-none focus:border-blue-400 focus:bg-gray-200 hover:bg-gray-200 transition-all duration-300"
                   />
                 </div>
 
@@ -215,7 +215,7 @@ const Contact = () => {
                     onChange={handleInputChange}
                     required
                     placeholder="Your Message"
-                    className="w-full px-4 py-3.5 bg-gray-700/50 border border-gray-600/30 rounded-lg text-white placeholder-gray-400 font-mono focus:outline-none focus:border-blue-400/50 focus:bg-gray-600/50 hover:bg-gray-600/30 transition-all duration-300 resize-none"
+                    className="w-full px-4 py-3.5 bg-gray-100 border border-gray-300 rounded-lg text-gray-900 placeholder-gray-600 font-mono focus:outline-none focus:border-blue-400 focus:bg-gray-200 hover:bg-gray-200 transition-all duration-300 resize-none"
                   />
                 </div>
 
@@ -241,19 +241,19 @@ const Contact = () => {
                 {/* Status Message */}
                 {formStatus && (
                   <div className={`p-4 rounded-lg border transition-all duration-300 ${
-                    formStatus.includes('successfully') 
-                      ? 'bg-green-500/20 border-green-400/30 text-green-200' 
-                      : formStatus.includes('Sending') 
-                      ? 'bg-blue-500/20 border-blue-400/30 text-blue-200'
-                      : 'bg-red-500/20 border-red-400/30 text-red-200'
+                    formStatus.includes('successfully')
+                      ? 'bg-green-100 border-green-400 text-green-700'
+                      : formStatus.includes('Sending')
+                      ? 'bg-blue-100 border-blue-400 text-blue-700'
+                      : 'bg-red-100 border-red-400 text-red-700'
                   }`}>
                     <div className="flex items-center gap-3">
                       {formStatus.includes('successfully') ? (
-                        <CheckCircle className="w-5 h-5 text-green-400" />
+                        <CheckCircle className="w-5 h-5 text-green-600" />
                       ) : formStatus.includes('Sending') ? (
-                        <div className="w-5 h-5 border-2 border-blue-400 border-t-transparent rounded-full animate-spin"></div>
+                        <div className="w-5 h-5 border-2 border-blue-600 border-t-transparent rounded-full animate-spin"></div>
                       ) : (
-                        <AlertCircle className="w-5 h-5 text-red-400" />
+                        <AlertCircle className="w-5 h-5 text-red-600" />
                       )}
                       <p className="font-mono font-medium">{formStatus}</p>
                     </div>
@@ -266,15 +266,15 @@ const Contact = () => {
 
         {/* OR Separator */}
         <div className="flex items-center justify-center my-12">
-          <div className="flex-1 h-px bg-gradient-to-r from-transparent via-gray-600 to-transparent"></div>
-          <span className="px-6 text-gray-400 font-mono font-bold text-lg">OR</span>
-          <div className="flex-1 h-px bg-gradient-to-r from-transparent via-gray-600 to-transparent"></div>
+          <div className="flex-1 h-px bg-gradient-to-r from-transparent via-gray-400 to-transparent"></div>
+          <span className="px-6 text-gray-600 font-mono font-bold text-lg">OR</span>
+          <div className="flex-1 h-px bg-gradient-to-r from-transparent via-gray-400 to-transparent"></div>
         </div>
 
         {/* Call to Action */}
         <div className="text-center">
-          <div className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 border border-blue-400/20 rounded-xl p-8">
-            <h3 className="text-2xl font-bold text-white font-mono mb-4">
+          <div className="bg-gradient-to-r from-blue-100 to-purple-100 border border-blue-400 rounded-xl p-8">
+            <h3 className="text-2xl font-bold text-gray-900 font-mono mb-4">
               Schedule a Google-Meet via Calendly
             </h3>
             <div className="flex justify-center">
