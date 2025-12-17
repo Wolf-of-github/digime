@@ -10,18 +10,13 @@ const experiences = [
   {
     role: 'AI Engineering Intern',
     company: 'NeuralSeek', // Update with actual company name
-    duration: 'Jun 2024 – Jul 2024', // Update with actual dates
+    duration: 'Oct 2025 – Nov 2025', // Update with actual dates
     period: '6 weeks',
     location: 'Miami (Remote)', // Update with actual location
-    description: "Completed an intensive AI engineering internship focused on building no-code agentic AI workflows and configuring RAG (Retrieval-Augmented Generation) pipelines. Applied ethical AI practices throughout the development process to ensure responsible AI implementation. Delivered a functional multi-agent automation solution showcasing advanced workflow orchestration. Built an automated resume-optimization agent using NeuralSeek's mAIstro platform, leveraging LLM-driven retrieval and intelligent workflow orchestration to align user resumes with job descriptions, improving application success rates through AI-powered content optimization.",
+    description: "AI engineering externship: built multi-agent workflows and resume-optimization agent using LLM-driven RAG pipelines.",
     technologies: ['LLMs', 'RAG Pipelines', 'mAIstro Platform', 'Multi-Agent Systems', 'Workflow Orchestration', 'NLP', 'Ethical AI'],
-    achievements: [
-      'Built automated resume-optimization agent with LLM-driven retrieval',
-      'Configured and deployed RAG pipelines for intelligent content generation',
-      'Delivered functional multi-agent automation solution',
-      'Applied ethical AI practices across all development stages'
-    ],
     image: nslogo,
+    credentialLink: 'https://credsverse.com/credentials/dc72436b-5540-418e-9262-11771d0adbd9', // Update with actual NeuralSeek credential link
   },
   {
     role: 'Software Developer Intern',
@@ -38,6 +33,7 @@ const experiences = [
       'Collaborated directly with C-level executives'
     ],
     image: credenceLogo,
+    credentialLink: 'https://drive.google.com/file/d/1jNoR-XC1pDN1PRNdpPc3aENfcIjtusRQ/view?usp=sharing',
   }
 ];
 
@@ -144,38 +140,42 @@ export default function WorkExperience() {
                     </div>
 
                     {/* Key Achievements */}
-                    <div>
-                      <h4 className="text-sm font-bold text-gray-700 font-mono mb-4 uppercase tracking-wider flex items-center gap-2">
-                        <Award className="w-4 h-4 text-yellow-600" />
-                        Key Achievements
-                      </h4>
-                      <div className="grid grid-cols-1 lg:grid-cols-2 gap-3">
-                        {exp.achievements.map((achievement, achIndex) => (
-                          <div key={achIndex} className="flex items-start gap-3 group">
-                            <div className="w-2 h-2 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full mt-2 flex-shrink-0 group-hover:scale-125 transition-transform duration-200"></div>
-                            <span className="text-sm text-gray-700 font-mono leading-relaxed group-hover:text-gray-900 transition-colors duration-200">
-                              {achievement}
-                            </span>
-                          </div>
-                        ))}
+                    {exp.achievements && exp.achievements.length > 0 && (
+                      <div>
+                        <h4 className="text-sm font-bold text-gray-700 font-mono mb-4 uppercase tracking-wider flex items-center gap-2">
+                          <Award className="w-4 h-4 text-yellow-600" />
+                          Key Achievements
+                        </h4>
+                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-3">
+                          {exp.achievements.map((achievement, achIndex) => (
+                            <div key={achIndex} className="flex items-start gap-3 group">
+                              <div className="w-2 h-2 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full mt-2 flex-shrink-0 group-hover:scale-125 transition-transform duration-200"></div>
+                              <span className="text-sm text-gray-700 font-mono leading-relaxed group-hover:text-gray-900 transition-colors duration-200">
+                                {achievement}
+                              </span>
+                            </div>
+                          ))}
+                        </div>
                       </div>
-                    </div>
+                    )}
                   </div>
 
                   {/* Recommendation Link */}
-                  <div className="lg:col-span-1 flex justify-center lg:justify-end">
-                    <a
-                      href="https://drive.google.com/file/d/1jNoR-XC1pDN1PRNdpPc3aENfcIjtusRQ/view?usp=sharing"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="group relative flex items-center justify-center bg-gradient-to-r from-blue-100 to-purple-100 hover:from-blue-200 hover:to-purple-200 text-gray-900 hover:text-gray-700 p-4 rounded-xl transition-all duration-300 border border-blue-400 hover:border-blue-500 hover:scale-105"
-                      title="View Letter of Recommendation"
-                    >
-                      <ExternalLink className="w-6 h-6 transition-transform duration-200" />
-                      <div className="absolute -top-2 -right-2 w-3 h-3 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full animate-ping opacity-75"></div>
-                      <div className="absolute -top-2 -right-2 w-3 h-3 bg-blue-600 rounded-full"></div>
-                    </a>
-                  </div>
+                  {exp.credentialLink && (
+                    <div className="lg:col-span-1 flex justify-center lg:justify-end">
+                      <a
+                        href={exp.credentialLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="group relative flex items-center justify-center bg-gradient-to-r from-blue-100 to-purple-100 hover:from-blue-200 hover:to-purple-200 text-gray-900 hover:text-gray-700 p-4 rounded-xl transition-all duration-300 border border-blue-400 hover:border-blue-500 hover:scale-105"
+                        title="View Letter of Recommendation"
+                      >
+                        <ExternalLink className="w-6 h-6 transition-transform duration-200" />
+                        <div className="absolute -top-2 -right-2 w-3 h-3 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full animate-ping opacity-75"></div>
+                        <div className="absolute -top-2 -right-2 w-3 h-3 bg-blue-600 rounded-full"></div>
+                      </a>
+                    </div>
+                  )}
                 </div>
               </div>
             </div>

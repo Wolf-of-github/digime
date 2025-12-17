@@ -29,20 +29,20 @@ const App = () => {
             <Education />
         </section>
 
+        <section id="certifications" className=" pb-8">
+          <CertGallery />
+        </section>
+        
+        <section id="skills" className="">
+          <Skills />
+        </section>
+
         <section className="">
           <WorkExperience />
         </section>
 
         <section className="">
           <Projects />
-        </section>
-
-        <section id="certifications" className=" pb-8">
-          <CertGallery />
-        </section>
-
-        <section id="skills" className="">
-          <Skills />
         </section>
 
         <section id="contact" className="mt-24">

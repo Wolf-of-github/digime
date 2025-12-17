@@ -49,13 +49,13 @@ export default function Navbar() {
             <span className="font-mono">LinkedIn</span>
           </a>
 
-          <a
+          {/* <a
             href="#/blogs"
             className="group flex items-center gap-2 text-gray-700 hover:text-gray-900 transition-all duration-300 px-3 py-2 rounded-lg hover:bg-gray-200/50 font-bold"
           >
             <PenTool className="w-4 h-4 group-hover:scale-110 transition-transform duration-200" />
             <span className="font-mono">Blog</span>
-          </a>
+          </a> */}
         </div>
       </div>
     </nav>

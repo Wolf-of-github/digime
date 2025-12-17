@@ -3,63 +3,41 @@ import { Code, Database, Cloud, GitBranch, Container, Cpu, Sparkles, Network, Se
 
 const skillsData = [
   {
-    category: 'Programming Languages',
-    icon: <Code className="w-5 h-5" />,
-    color: 'from-yellow-400 to-yellow-600',
-    borderColor: 'border-yellow-400/30',
-    skills: [
-      { name: 'Python', proficiency: 'Expert' },
-      { name: 'Java', proficiency: 'Advanced' }
-    ]
-  },
-  {
     category: 'Cloud & Infrastructure',
     icon: <Cloud className="w-5 h-5" />,
     color: 'from-blue-400 to-blue-600',
     borderColor: 'border-blue-400/30',
-    skills: [
-      { name: 'Cloud Computing', proficiency: 'Advanced' },
-      { name: 'Computer Networks', proficiency: 'Advanced' },
-      { name: 'Operating Systems', proficiency: 'Advanced' }
-    ]
+    skills: ['Cloud Computing', 'Computer Networks', 'Operating Systems']
+  },
+  {
+    category: 'Programming Languages',
+    icon: <Code className="w-5 h-5" />,
+    color: 'from-yellow-400 to-yellow-600',
+    borderColor: 'border-yellow-400/30',
+    skills: ['Python', 'Java']
   },
   {
     category: 'AI & Machine Learning',
     icon: <Cpu className="w-5 h-5" />,
     color: 'from-orange-400 to-orange-600',
     borderColor: 'border-orange-400/30',
-    skills: [
-      { name: 'Artificial Intelligence', proficiency: 'Advanced' },
-      { name: 'Machine Learning', proficiency: 'Advanced' },
-      { name: 'Big Data Analytics', proficiency: 'Advanced' }
-    ]
+    skills: ['Artificial Intelligence', 'Machine Learning', 'Big Data Analytics']
   },
   {
     category: 'Data Management',
     icon: <Database className="w-5 h-5" />,
     color: 'from-purple-400 to-purple-600',
     borderColor: 'border-purple-400/30',
-    skills: [
-      { name: 'Database Management Systems', proficiency: 'Advanced' }
-    ]
+    skills: ['Database Management Systems']
   },
   {
     category: 'Software Engineering',
     icon: <Settings className="w-5 h-5" />,
     color: 'from-green-400 to-green-600',
     borderColor: 'border-green-400/30',
-    skills: [
-      { name: 'Software Development Lifecycle Management', proficiency: 'Advanced' }
-    ]
+    skills: ['Software Development Lifecycle Management']
   }
 ];
-
-// Proficiency badge styling
-const proficiencyStyles = {
-  'Expert': 'bg-purple-100 border-purple-400 text-purple-700',
-  'Advanced': 'bg-blue-100 border-blue-400 text-blue-700',
-  'Intermediate': 'bg-green-100 border-green-400 text-green-700'
-};
 
 export default function Skills() {
   return (
@@ -75,8 +53,8 @@ export default function Skills() {
         </p>
       </div>
 
-      {/* Skills Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {/* Skills List - Vertically Stacked */}
+      <div className="max-w-4xl mx-auto space-y-6">
         {skillsData.map((category, categoryIndex) => (
           <div
             key={categoryIndex}
@@ -94,21 +72,15 @@ export default function Skills() {
             </div>
 
             {/* Skills List */}
-            <div className="space-y-3">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
               {category.skills.map((skill, skillIndex) => (
                 <div
                   key={skillIndex}
                   className="group/skill bg-gray-100 hover:bg-gray-200 rounded-lg p-3 transition-all duration-200 border border-gray-300 hover:border-gray-400"
                 >
-                  {/* Skill Name and Proficiency */}
-                  <div className="flex items-center justify-between">
-                    <span className="text-gray-900 font-mono text-sm font-semibold">
-                      {skill.name}
-                    </span>
-                    <span className={`text-xs font-mono px-2 py-1 rounded-md border ${proficiencyStyles[skill.proficiency]}`}>
-                      {skill.proficiency}
-                    </span>
-                  </div>
+                  <span className="text-gray-900 font-mono text-sm font-semibold">
+                    {skill}
+                  </span>
                 </div>
               ))}
             </div>
@@ -116,55 +88,6 @@ export default function Skills() {
         ))}
       </div>
 
-      {/* Legend */}
-      <div className="mt-12 flex flex-wrap justify-center gap-4">
-        <div className="inline-flex items-center gap-2 bg-purple-100 border border-purple-400 text-purple-700 px-4 py-2 rounded-lg font-mono text-xs">
-          <div className="w-2 h-2 bg-purple-600 rounded-full"></div>
-          Expert: Extensive professional experience
-        </div>
-        <div className="inline-flex items-center gap-2 bg-blue-100 border border-blue-400 text-blue-700 px-4 py-2 rounded-lg font-mono text-xs">
-          <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
-          Advanced: Strong hands-on experience
-        </div>
-        <div className="inline-flex items-center gap-2 bg-green-100 border border-green-400 text-green-700 px-4 py-2 rounded-lg font-mono text-xs">
-          <div className="w-2 h-2 bg-green-600 rounded-full"></div>
-          Intermediate: Working knowledge
-        </div>
-      </div>
-
-      {/* Summary Stats */}
-      {/* <div className="mt-8 text-center">
-        <div className="inline-flex flex-wrap items-center gap-6 bg-gradient-to-r from-blue-500/10 to-purple-500/10 border border-blue-400/20 rounded-xl px-8 py-4">
-          <div>
-            <div className="text-2xl font-bold text-white font-mono">
-              {skillsData.reduce((total, category) => total + category.skills.length, 0)}
-            </div>
-            <div className="text-gray-300 font-mono text-xs">
-              Core Skills
-            </div>
-          </div>
-          <div className="w-px h-10 bg-gray-600"></div>
-          <div>
-            <div className="text-2xl font-bold text-white font-mono">
-              {skillsData.length}
-            </div>
-            <div className="text-gray-300 font-mono text-xs">
-              Categories
-            </div>
-          </div>
-          <div className="w-px h-10 bg-gray-600"></div>
-          <div>
-            <div className="text-2xl font-bold text-white font-mono">
-              {skillsData.reduce((total, category) =>
-                total + category.skills.filter(s => s.proficiency === 'Expert').length, 0
-              )}
-            </div>
-            <div className="text-gray-300 font-mono text-xs">
-              Expert Level
-            </div>
-          </div>
-        </div>
-      </div> */}
     </section>
   );
 }

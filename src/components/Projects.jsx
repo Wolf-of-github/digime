@@ -1,5 +1,5 @@
-import React from 'react';
-import { Github, ExternalLink, Code, Cpu, Database, Zap, Star, Calendar } from 'lucide-react';
+import React, { useState } from 'react';
+import { Github, ExternalLink, Code, Cpu, Database, Zap, Star, Calendar, ChevronDown } from 'lucide-react';
 
 // Placeholder images - replace with your actual imports
 import chipImage from '../assets/mlx.png'
@@ -26,6 +26,22 @@ export default function Projects() {
       ]
     },
     {
+  title: 'Autonomous Recipe Recommendation Engine',
+  tech: ['Python', 'FastAPI', 'PostgreSQL', 'Scikit-learn', 'Docker'],
+  description: 'Built an experimental recommendation system that suggests recipes based on user mood, time constraints, and available ingredients. Implemented collaborative filtering combined with rule-based constraints and deployed the service using a containerized FastAPI backend.',
+  github: 'https://github.com/example-user/recipe-recommender',
+  image: airflow_aws,
+  category: 'Applied AI',
+  status: 'In Progress',
+  date: '2024',
+  highlights: [
+    'Hybrid recommendation approach',
+    'RESTful API with FastAPI',
+    'Containerized deployment using Docker',
+    'PostgreSQL-backed feature storage'
+  ]
+},
+    {
       title: 'Mushroom Classification ML Pipeline',
       tech: ['Apache Airflow', 'AWS Glue', 'Amazon SageMaker', 'XGBoost', 'Python', 'S3', 'CloudWatch'],
       description: 'Robust Apache Airflow pipeline for processing mushroom dataset and training a binary classification model using AWS Glue ETL and SageMaker. Features intelligent conditional processing that prevents unnecessary reprocessing and handles idempotent operations safely.',
@@ -41,7 +57,7 @@ export default function Projects() {
         'XGBoost binary classification for edible vs poisonous mushroom prediction',
         'Comprehensive monitoring with CloudWatch logging and metrics',
         'Idempotent design allowing safe pipeline re-execution'
-      ]
+      ],
     }
     // {
     //   title: 'Coming Soon - More Projects',
@@ -59,7 +75,12 @@ export default function Projects() {
     //     'Performance optimization'
     //   ]
     // }
+
+
   ];
+
+  const [showAll, setShowAll] = useState(false);
+  const visibleProjects = showAll ? projectList : projectList.slice(0, 1);
 
   return (
     <section id="projects" className="mt-20">
@@ -80,7 +101,7 @@ export default function Projects() {
         <div className="hidden md:block absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-blue-500 to-purple-600"></div>
         
         <div className="space-y-12">
-          {projectList.map((project, index) => (
+          {visibleProjects.map((project, index) => (
             <div key={index} className="relative">
               {/* Timeline dot */}
               <div className="hidden md:block absolute left-6 w-5 h-5 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full border-4 border-white z-10">
@@ -215,9 +236,9 @@ export default function Projects() {
                   </div>
                 </div>
               </div>
-              
+
               {/* Connector line for mobile */}
-              {index < projectList.length - 1 && (
+              {index < visibleProjects.length - 1 && (
                 <div className="md:hidden flex justify-center mt-8">
                   <div className="w-0.5 h-8 bg-gradient-to-b from-purple-500 to-blue-500"></div>
                 </div>
@@ -225,6 +246,22 @@ export default function Projects() {
             </div>
           ))}
         </div>
+
+        {/* Show More Button */}
+        {!showAll && projectList.length > 1 && (
+          <div className="mt-12 text-center">
+            <button
+              onClick={() => setShowAll(true)}
+              className="group inline-flex items-center gap-3 bg-gradient-to-r from-blue-100 to-purple-100 hover:from-blue-200 hover:to-purple-200 text-gray-900 hover:text-gray-700 px-8 py-4 rounded-xl transition-all duration-300 border border-blue-400 hover:border-blue-500 hover:scale-105 shadow-lg hover:shadow-2xl font-mono font-semibold"
+            >
+              <span>Show {projectList.length - 1} More Project{projectList.length - 1 > 1 ? 's' : ''}</span>
+              <ChevronDown className="w-5 h-5 group-hover:translate-y-1 transition-transform duration-300" />
+            </button>
+            <p className="mt-4 text-gray-600 font-mono text-sm">
+              {projectList.length - 1} additional project{projectList.length - 1 > 1 ? 's' : ''} available to view
+            </p>
+          </div>
+        )}
       </div>
 
       {/* Call to Action
