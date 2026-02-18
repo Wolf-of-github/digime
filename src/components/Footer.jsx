@@ -5,7 +5,7 @@ const Footer = () => {
   const [visitorCount, setVisitorCount] = useState(null);
 
   useEffect(() => {
-    fetch("https://portfolio-visitor-counter.goatcounter.com/counter/*.json")
+    fetch("https://portfolio-visitor-counter.goatcounter.com/counter/%2F.json")
       .then(res => res.json())
       .then(data => {
         const count = data.count;
