@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 
 const skillsData = [
+  // ─────────────────────────────────────────────────────────────
+  // Programming Languages
+  // ─────────────────────────────────────────────────────────────
   {
     name: 'Python',
     image: '/python.png',
@@ -8,32 +11,39 @@ const skillsData = [
   },
   {
     name: 'Java',
-    image: '/spring.svg',
+    image: '/java.svg',
     category: 'Programming'
   },
   {
-    name: 'Docker',
-    image: '/docker.png',
-    category: 'DevOps'
+    name: 'C++',
+    image: '/cpp.svg',
+    category: 'Programming'
   },
-  {
-    name: 'Go',
-    image: '/goalng.jpeg',
-    category: 'DevOps'
-  },
+
+  // ─────────────────────────────────────────────────────────────
+  // Frontend
+  // ─────────────────────────────────────────────────────────────
   {
     name: 'React',
     image: '/react.png',
     category: 'Frontend'
   },
+
+  // ─────────────────────────────────────────────────────────────
+  // Backend
+  // ─────────────────────────────────────────────────────────────
   {
     name: 'Node.js',
     image: '/nodejs.png',
     category: 'Backend'
   },
+
+  // ─────────────────────────────────────────────────────────────
+  // Databases
+  // ─────────────────────────────────────────────────────────────
   {
     name: 'MongoDB',
-    image: '/mongodb.png',
+    image: '/mongo.png',
     category: 'Database'
   },
   {
@@ -41,10 +51,14 @@ const skillsData = [
     image: '/postgresql.png',
     category: 'Database'
   },
+
+  // ─────────────────────────────────────────────────────────────
+  // DevOps & Infrastructure
+  // ─────────────────────────────────────────────────────────────
   {
-    name: 'TensorFlow',
-    image: '/tensorflow.png',
-    category: 'AI/ML'
+    name: 'Docker',
+    image: '/docker.png',
+    category: 'DevOps'
   },
   {
     name: 'Kubernetes',
@@ -52,19 +66,44 @@ const skillsData = [
     category: 'DevOps'
   },
   {
+    name: 'Terraform',
+    image: '/terraform.png',
+    category: 'DevOps'
+  },
+
+  {
+    name: 'ArgoCD',
+    image: '/argo.png',
+    category: 'DevOps'
+  },
+
+  // ─────────────────────────────────────────────────────────────
+  // AI / Machine Learning
+  // ─────────────────────────────────────────────────────────────
+  {
+    name: 'Lang Graph',
+    image: '/langgraph.png',
+    category: 'AI/ML'
+  },
+
+    {
+    name: 'n8n Automation',
+    image: '/n8n-1.png',
+    category: 'AI/ML'
+  },
+
+  // ─────────────────────────────────────────────────────────────
+  // Tools & OS
+  // ─────────────────────────────────────────────────────────────
+  {
     name: 'Git',
     image: '/git.png',
     category: 'Tools'
   },
   {
     name: 'Linux',
-    image: '/linux.png',
+    image: '/linux.jpg',
     category: 'OS'
-  },
-  {
-    name: 'Terraform',
-    image: '/terraform.png',
-    category: 'DevOps'
   }
 ];
 

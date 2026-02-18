@@ -59,28 +59,20 @@ export default function Projects() {
         'Idempotent design allowing safe pipeline re-execution'
       ],
     }
-    // {
-    //   title: 'Coming Soon - More Projects',
-    //   tech: ['React', 'Node.js', 'Python', 'TensorFlow'],
-    //   description: 'Additional exciting projects are in development. Stay tuned for updates on full-stack applications, machine learning models, and innovative solutions.',
-    //   github: '#',
-    //   image: symptomsftImage,
-    //   category: 'Full Stack',
-    //   status: 'In Development',
-    //   date: '2024',
-    //   highlights: [
-    //     'Modern web technologies',
-    //     'Scalable architecture',
-    //     'User-centric design',
-    //     'Performance optimization'
-    //   ]
-    // }
-
-
   ];
 
   const [showAll, setShowAll] = useState(false);
-  const visibleProjects = showAll ? projectList : projectList.slice(0, 1);
+  const [activeCategory, setActiveCategory] = useState('All');
+
+  // Extract unique categories from projects
+  const categories = ['All', ...new Set(projectList.map(p => p.category))];
+
+  // Filter projects by category
+  const filteredProjects = activeCategory === 'All'
+    ? projectList
+    : projectList.filter(p => p.category === activeCategory);
+
+  const visibleProjects = showAll ? filteredProjects : filteredProjects.slice(0, 1);
 
   return (
     <section id="projects" className="mt-20">
@@ -93,6 +85,26 @@ export default function Projects() {
         <p className="text-gray-700 font-mono mt-4 max-w-2xl mx-auto">
           A showcase of innovative solutions combining cutting-edge technologies with practical applications
         </p>
+
+        {/* Category Filter */}
+        <div className="flex flex-wrap justify-center gap-3 mt-8">
+          {categories.map((category) => (
+            <button
+              key={category}
+              onClick={() => {
+                setActiveCategory(category);
+                setShowAll(false);
+              }}
+              className={`px-4 py-2 rounded-lg font-mono text-sm font-medium transition-all duration-300 border ${
+                activeCategory === category
+                  ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white border-transparent shadow-lg'
+                  : 'bg-white/80 text-gray-700 border-gray-300 hover:border-blue-400 hover:bg-blue-50'
+              }`}
+            >
+              {category}
+            </button>
+          ))}
+        </div>
       </div>
 
       {/* Projects Timeline */}
