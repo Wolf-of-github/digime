@@ -5,23 +5,12 @@ const Footer = () => {
   const [visitorCount, setVisitorCount] = useState(null);
 
   useEffect(() => {
-    fetch("https://plausible.io/api/v2/query", {
-      method: "POST",
-      headers: {
-        "Authorization": "Bearer pnfLo4CW35vL1Jt8Zc6rcbP2Zh0jpogb9nUK-M0anYq-N2dkoCFgTLXxvWPSY-wu",
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify({
-        site_id: "ishaanapte.me",
-        metrics: ["visitors"],
-        date_range: "all"
-      })
-    })
+    fetch("https://portfolio-visitor-counter.goatcounter.com/counter/*.json")
       .then(res => res.json())
       .then(data => {
-        const count = data.results?.[0]?.metrics?.[0];
-        if (typeof count === "number") {
-          setVisitorCount(count);
+        const count = data.count;
+        if (count) {
+          setVisitorCount(parseInt(count.replace(/,/g, ''), 10));
         }
       })
       .catch((err) => console.error("Failed to fetch visitor count", err));
