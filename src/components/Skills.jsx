@@ -1,93 +1,208 @@
-import React from 'react';
-import { Code, Database, Cloud, GitBranch, Container, Cpu, Sparkles, Network, Settings } from 'lucide-react';
+import React, { useState } from 'react';
 
 const skillsData = [
   {
-    category: 'Cloud & Infrastructure',
-    icon: <Cloud className="w-5 h-5" />,
-    color: 'from-blue-400 to-blue-600',
-    borderColor: 'border-blue-400/30',
-    skills: ['Cloud Computing', 'Computer Networks', 'Operating Systems']
+    name: 'Python',
+    image: '/python.png',
+    category: 'Programming'
   },
   {
-    category: 'Programming Languages',
-    icon: <Code className="w-5 h-5" />,
-    color: 'from-yellow-400 to-yellow-600',
-    borderColor: 'border-yellow-400/30',
-    skills: ['Python', 'Java']
+    name: 'Java',
+    image: '/spring.svg',
+    category: 'Programming'
   },
   {
-    category: 'AI & Machine Learning',
-    icon: <Cpu className="w-5 h-5" />,
-    color: 'from-orange-400 to-orange-600',
-    borderColor: 'border-orange-400/30',
-    skills: ['Artificial Intelligence', 'Machine Learning', 'Big Data Analytics']
+    name: 'Docker',
+    image: '/docker.png',
+    category: 'DevOps'
   },
   {
-    category: 'Data Management',
-    icon: <Database className="w-5 h-5" />,
-    color: 'from-purple-400 to-purple-600',
-    borderColor: 'border-purple-400/30',
-    skills: ['Database Management Systems']
+    name: 'Go',
+    image: '/goalng.jpeg',
+    category: 'DevOps'
   },
   {
-    category: 'Software Engineering',
-    icon: <Settings className="w-5 h-5" />,
-    color: 'from-green-400 to-green-600',
-    borderColor: 'border-green-400/30',
-    skills: ['Software Development Lifecycle Management']
+    name: 'React',
+    image: '/react.png',
+    category: 'Frontend'
+  },
+  {
+    name: 'Node.js',
+    image: '/nodejs.png',
+    category: 'Backend'
+  },
+  {
+    name: 'MongoDB',
+    image: '/mongodb.png',
+    category: 'Database'
+  },
+  {
+    name: 'PostgreSQL',
+    image: '/postgresql.png',
+    category: 'Database'
+  },
+  {
+    name: 'TensorFlow',
+    image: '/tensorflow.png',
+    category: 'AI/ML'
+  },
+  {
+    name: 'Kubernetes',
+    image: '/kubectl.png',
+    category: 'DevOps'
+  },
+  {
+    name: 'Git',
+    image: '/git.png',
+    category: 'Tools'
+  },
+  {
+    name: 'Linux',
+    image: '/linux.png',
+    category: 'OS'
+  },
+  {
+    name: 'Terraform',
+    image: '/terraform.png',
+    category: 'DevOps'
   }
 ];
 
+// Generate positions using a grid system with sparse assignment
+const generateRandomPositions = (count) => {
+  // Create an extremely sparse grid to prevent any overlapping
+  // With 13 items, use a 5x3 grid (15 cells), giving each ~200px of space
+  const cols = 5;
+  const rows = 3;
+  const totalCells = cols * rows;
+
+  // Create array of all possible grid positions
+  const gridCells = [];
+  for (let row = 0; row < rows; row++) {
+    for (let col = 0; col < cols; col++) {
+      gridCells.push({ row, col });
+    }
+  }
+
+  // Shuffle the grid cells array to randomize
+  for (let i = gridCells.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [gridCells[i], gridCells[j]] = [gridCells[j], gridCells[i]];
+  }
+
+  // Take the first 'count' cells from the shuffled array
+  const selectedCells = gridCells.slice(0, count);
+
+  // Convert grid positions to percentages with margins
+  const positions = selectedCells.map(cell => {
+    // Calculate base position for this grid cell
+    const cellWidth = 100 / cols;
+    const cellHeight = 100 / rows;
+
+    // Exact center of the cell
+    const centerX = (cell.col + 0.5) * cellWidth;
+    const centerY = (cell.row + 0.5) * cellHeight;
+
+    return {
+      left: `${centerX}%`,
+      top: `${centerY}%`,
+      animationDelay: `${Math.random() * 2}s`,
+      animationDuration: `${3 + Math.random() * 2}s`
+    };
+  });
+
+  return positions;
+};
+
 export default function Skills() {
+  const [hoveredSkill, setHoveredSkill] = useState(null);
+  const [positions] = useState(() => generateRandomPositions(skillsData.length));
+
   return (
-    <section className="mt-20">
+    <section className="mt-20 mb-20">
       {/* Section Header */}
-      <div className="text-center mb-12">
+      <div className="text-center mb-16">
         <h2 className="text-4xl font-bold text-gray-900 font-mono mb-4">
           Technical Skills
         </h2>
         <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto mb-4"></div>
         <p className="text-gray-700 font-mono text-sm max-w-2xl mx-auto">
-          A comprehensive overview of my technical expertise across various domains
+          Hover over each skill to see its name
         </p>
       </div>
 
-      {/* Skills List - Vertically Stacked */}
-      <div className="max-w-4xl mx-auto space-y-6">
-        {skillsData.map((category, categoryIndex) => (
-          <div
-            key={categoryIndex}
-            className="bg-white/80 border border-gray-200 text-gray-900 rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 group"
-          >
+      {/* Floating Skills Container */}
+      <div className="relative w-full max-w-6xl mx-auto p-8" style={{ height: '600px' }}>
+        {skillsData.map((skill, index) => {
+          const position = positions[index];
 
-            {/* Category Header */}
-            <div className="flex items-center gap-3 mb-6 pb-4 border-b border-gray-300">
-              <div className={`p-3 bg-gradient-to-r ${category.color} bg-opacity-20 border ${category.borderColor} rounded-lg group-hover:scale-110 transition-transform duration-300`}>
-                {category.icon}
-              </div>
-              <h3 className="text-lg font-bold text-gray-900 font-mono">
-                {category.category}
-              </h3>
-            </div>
+          return (
+            <div
+              key={index}
+              className="absolute transform -translate-x-1/2 -translate-y-1/2 cursor-pointer group"
+              style={{
+                ...position,
+                animation: `float ${position.animationDuration} ease-in-out infinite`,
+                animationDelay: position.animationDelay
+              }}
+              onMouseEnter={() => setHoveredSkill(index)}
+              onMouseLeave={() => setHoveredSkill(null)}
+            >
+              {/* Circular Image Frame */}
+              <div className="relative">
+                {/* Animated Ring */}
+                <div className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-md scale-110"></div>
 
-            {/* Skills List */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
-              {category.skills.map((skill, skillIndex) => (
-                <div
-                  key={skillIndex}
-                  className="group/skill bg-gray-100 hover:bg-gray-200 rounded-lg p-3 transition-all duration-200 border border-gray-300 hover:border-gray-400"
-                >
-                  <span className="text-gray-900 font-mono text-sm font-semibold">
-                    {skill}
-                  </span>
+                {/* Image Container */}
+                <div className="relative w-36 h-36 md:w-44 md:h-44 lg:w-48 lg:h-48 rounded-full bg-white shadow-lg group-hover:shadow-2xl transition-all duration-300 group-hover:scale-105 border-4 border-gray-200 group-hover:border-transparent overflow-hidden">
+                  <img
+                    src={skill.image}
+                    alt={skill.name}
+                    className="w-full h-full object-cover p-2"
+                    onError={(e) => {
+                      // Fallback if image doesn't exist
+                      e.target.style.display = 'none';
+                      e.target.parentElement.innerHTML = `<div class="w-full h-full flex items-center justify-center text-2xl font-bold text-gray-700">${skill.name.charAt(0)}</div>`;
+                    }}
+                  />
                 </div>
-              ))}
+
+                {/* Skill Name Tooltip */}
+                <div
+                  className={`absolute left-1/2 -translate-x-1/2 -bottom-12 bg-gray-900 text-white px-4 py-2 rounded-lg font-mono text-sm whitespace-nowrap transition-all duration-300 ${
+                    hoveredSkill === index
+                      ? 'opacity-100 translate-y-0'
+                      : 'opacity-0 translate-y-2 pointer-events-none'
+                  }`}
+                >
+                  {skill.name}
+                  <div className="absolute -top-1 left-1/2 -translate-x-1/2 w-2 h-2 bg-gray-900 transform rotate-45"></div>
+                </div>
+
+                {/* Category Badge */}
+                <div className="absolute -top-2 -right-2 bg-gradient-to-r from-blue-500 to-purple-600 text-white text-xs px-2 py-1 rounded-full font-mono opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  {skill.category}
+                </div>
+              </div>
             </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
 
+      {/* CSS Animation */}
+      <style>{`
+        @keyframes float {
+          0%, 100% {
+            transform: translate(-50%, -50%) translateY(0px) rotate(0deg);
+          }
+          33% {
+            transform: translate(-50%, -50%) translateY(-20px) rotate(5deg);
+          }
+          66% {
+            transform: translate(-50%, -50%) translateY(10px) rotate(-5deg);
+          }
+        }
+      `}</style>
     </section>
   );
 }

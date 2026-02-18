@@ -64,7 +64,7 @@ const Contact = () => {
         </h2>
         <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto"></div>
         <p className="text-gray-700 font-mono mt-4 max-w-2xl mx-auto">
-          Have a project in mind or want to collaborate? I'd love to hear from you.
+          If you'd like to use this template for your own portfolio, feel free to reach out! I'm always open to connecting with fellow developers, potential collaborators, or anyone interested in chatting about tech.
         </p>
       </div>
 
@@ -264,15 +264,15 @@ const Contact = () => {
           </div>
         </div>
 
-        {/* OR Separator */}
+        {/* OR Separator
         <div className="flex items-center justify-center my-12">
           <div className="flex-1 h-px bg-gradient-to-r from-transparent via-gray-400 to-transparent"></div>
           <span className="px-6 text-gray-600 font-mono font-bold text-lg">OR</span>
           <div className="flex-1 h-px bg-gradient-to-r from-transparent via-gray-400 to-transparent"></div>
-        </div>
+        </div> */}
 
         {/* Call to Action */}
-        <div className="text-center">
+        {/* <div className="text-center">
           <div className="bg-gradient-to-r from-blue-100 to-purple-100 border border-blue-400 rounded-xl p-8">
             <h3 className="text-2xl font-bold text-gray-900 font-mono mb-4">
               Schedule a Google-Meet via Calendly
@@ -287,7 +287,7 @@ const Contact = () => {
               </a>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );

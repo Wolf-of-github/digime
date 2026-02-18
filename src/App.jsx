@@ -29,16 +29,16 @@ const App = () => {
             <Education />
         </section>
 
-        <section id="certifications" className=" pb-8">
-          <CertGallery />
+        <section className="">
+          <WorkExperience />
         </section>
-        
+
         <section id="skills" className="">
           <Skills />
         </section>
-
-        <section className="">
-          <WorkExperience />
+        
+        <section id="certifications" className=" pb-8">
+          <CertGallery />
         </section>
 
         <section className="">

@@ -15,9 +15,7 @@ export default function AboutMe() {
 
           <div className="bg-white/80 rounded-xl p-6 mt-8 shadow-lg border border-gray-200">
             <div className="text-lg sm:text-xl text-gray-800 font-mono text-justify leading-relaxed">
-              I am a computer science graduate student with expertise in engineering  backend systems, enabling AI automation and
-              cloud deployment at scale. Drawing by my industry experience and project work, I bring a keen understanding of product
-              development and the ability to recognize user expectations and build solutions that align with them.
+              Computer Science graduate student specializing in cloud-native systems, backend engineering, DevOps and AI automation. Skilled in building AWS infrastructure, Kubernetes platforms, CI/CD pipelines, and  microservices.
             </div>
           </div>
         </div>
